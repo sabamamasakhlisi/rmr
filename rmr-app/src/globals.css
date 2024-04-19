@@ -16,6 +16,9 @@
   --light-yellow: #fff491;
   --dark-red: #663227;
   --light-brown: #66623a;
+  --screen-sm: 768px;
+  --screen-md: 1024px;
+  --screen-lg: 1200px;
 }
 
 body {
@@ -96,4 +99,10 @@ body {
 
 .txt-pn {
   color: #ffb0be;
+}
+
+@media (max-width: 768px) {
+  .p-h {
+    padding: 0 1.725rem 2rem 1.725rem;
+  }
 }

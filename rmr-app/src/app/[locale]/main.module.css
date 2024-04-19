@@ -19,6 +19,7 @@
 
 .mainSection {
   width: 100%;
+  flex-direction: row;
 }
 
 .mainSection div {
@@ -29,4 +30,16 @@
   font-size: 4rem;
   cursor: pointer;
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .mainSubtitle {
+    padding: 0 1.725rem 2rem 1.725rem;
+  }
+  .mainSection {
+    flex-direction: column;
+  }
+  .mainSection div {
+    font-size: 3rem;
+  }
 }

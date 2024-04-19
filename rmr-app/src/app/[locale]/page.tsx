@@ -25,7 +25,7 @@ export default function Home() {
         </span>
       </p>
       <section
-        className={`${styles.mainSection} main-section flex-1 flex flex-row`}
+        className={`${styles.mainSection} main-section flex-1 flex`}
         aria-label="Main Content"
       >
         <div className="bg-pn txt-dark-br" aria-label={t("about")}>

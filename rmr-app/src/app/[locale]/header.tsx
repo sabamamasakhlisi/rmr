@@ -3,7 +3,6 @@ import styles from "./main.module.css";
 
 import Menu from "@/app/[locale]/components/menu";
 import { useTranslations } from "next-intl";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 export default function Header() {
   const t = useTranslations();
