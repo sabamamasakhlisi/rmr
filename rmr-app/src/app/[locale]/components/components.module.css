@@ -1,0 +1,11 @@
+.currentLang {
+  font-weight: 600;
+  color: var(--text-offwhite);
+  cursor: pointer;
+}
+
+.languageText {
+  font-weight: 400;
+  color: var(--light-text-offwhite);
+  cursor: pointer;
+}

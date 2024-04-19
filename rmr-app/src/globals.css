@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-offwhite: #e8e8e8;
+  --light-text-offwhite: #e8e8e87a;
+  --background-offblack: #171414;
+  --light-green: #b3ffba;
+  --dark-green: #47664a;
+  --light-purple: #a3b4ff;
+  --dark-purple: #414866;
+  --light-pink: #ffb0be;
+  --dark-pink: #66464c;
+  --light-orange: #ffb68c;
+  --light-yellow: #fff491;
+  --dark-red: #663227;
+  --light-brown: #66623a;
+}
+
+body {
+  color: var(--text-offwhite);
+  background: var(--background-offblack);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.p-h {
+  padding: 2rem 3.5rem 0 3.5rem;
+}
+
+.font-64px {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.font-34px {
+  font-size: 2.125rem;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.work {
+  color: var(--light-green);
+}
+
+.about {
+  color: var(--light-pink);
+}
+
+.contact {
+  color: var(--light-purple);
+}
+
+.txt-gr {
+  color: #b3ffba;
+}
+
+.bg-gr {
+  background-color: var(--light-green);
+}
+.bg-pn {
+  background-color: var(--light-pink);
+}
+
+.bg-pr {
+  background-color: var(--light-purple);
+}
+
+.txt-dark-br {
+  color: var(--dark-pink);
+}
+
+.txt-dark-gr {
+  color: var(--dark-green);
+}
+
+.txt-dark-pr {
+  color: var(--dark-purple);
+}
+
+.txt-yl {
+  color: #fff491;
+}
+
+.txt-pr {
+  color: #a3b4ff;
+}
+
+.txt-og {
+  color: #ffb68c;
+}
+
+.txt-pn {
+  color: #ffb0be;
+}
