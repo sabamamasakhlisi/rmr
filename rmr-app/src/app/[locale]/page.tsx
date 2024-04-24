@@ -1,11 +1,11 @@
+import Link from "next/link";
 import styles from "./main.module.css";
-import { useTranslations } from "next-intl";
-import { headers } from "next/headers";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations();
 
-  console.log(headers());
+  const locale = useLocale();
 
   return (
     <main className="flex-1 flex flex-col">
@@ -29,13 +29,13 @@ export default function Home() {
         aria-label="Main Content"
       >
         <div className="bg-pn txt-dark-br" aria-label={t("about")}>
-          {t("about")}
+          <Link href={`${locale}/about`}>{t("about")}</Link>
         </div>
         <div className="bg-gr txt-dark-gr" aria-label={t("work")}>
-          {t("work")}
+          <Link href={`${locale}/work`}>{t("work")}</Link>
         </div>
         <div className="bg-pr txt-dark-pr" aria-label={t("contact")}>
-          {t("contact")}
+          <Link href={`${locale}/contact`}>{t("contact")}</Link>
         </div>
       </section>
     </main>

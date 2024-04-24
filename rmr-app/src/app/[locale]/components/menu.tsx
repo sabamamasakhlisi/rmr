@@ -1,5 +1,5 @@
 "use client";
-import { MENU_LIST } from "@/_lib/constnats";
+import { HOME_URL_LENGTH, MENU_LIST } from "@/_lib/constnats";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
@@ -9,11 +9,11 @@ export default function Menu() {
   const locale = useLocale();
 
   return (
-    pathname.length > 3 && (
-      <nav aria-labelledby="main-menu">
+    pathname.length > HOME_URL_LENGTH && (
+      <nav aria-labelledby="main-menu" className="w-full">
         <ul
           role="menubar"
-          className="flex flex-row items-center justify-center gap-4 text-xl font-64px"
+          className="flex flex-row items-center gap-32 text-xl font-64px w-full rs-wrap"
         >
           {MENU_LIST.map((item) => (
             <li

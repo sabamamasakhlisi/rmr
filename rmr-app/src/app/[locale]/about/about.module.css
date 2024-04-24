@@ -1,0 +1,39 @@
+.text {
+  color: var(--background-end-rgb);
+}
+
+.section {
+  font-size: 1.875rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.me {
+  min-width: 336px;
+}
+
+.about p {
+  word-wrap: break-word;
+}
+
+.about p > span {
+  display: block;
+}
+
+@media (max-width: 1228px) {
+  .section {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    font-size: 1rem;
+  }
+
+  .me {
+    position: fixed;
+    z-index: -1;
+    opacity: 0.3;
+  }
+}

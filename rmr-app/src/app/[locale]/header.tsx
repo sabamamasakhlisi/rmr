@@ -8,11 +8,11 @@ export default function Header() {
   const t = useTranslations();
 
   return (
-    <header className="flex flex-row items-center justify-between p-h">
+    <header className="flex flex-row items-center gap-16 justify-between p-h w-full rs-col">
       <Link className={styles.title} href="/">
         {<strong>rosa</strong>}mtrbls
       </Link>
-      <div className="flex flex-row items-center justify-center gap-8">
+      <div className="flex flex-row items-center justify-center gap-8 w-full">
         <Menu />
         <LanguageSwitch />
       </div>

@@ -54,6 +54,12 @@ body {
   color: var(--light-pink);
 }
 
+.link-to {
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration-thickness: 1.5px;
+}
+
 .contact {
   color: var(--light-purple);
 }
@@ -99,6 +105,23 @@ body {
 
 .txt-pn {
   color: #ffb0be;
+}
+
+@media (max-width: 1386px) {
+  .rs-wrap {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1146px) {
+  .rs-wrap {
+    flex-wrap: wrap;
+  }
+  .rs-col {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {

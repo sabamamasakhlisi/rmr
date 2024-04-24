@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Space_Mono } from "next/font/google";
 import "../../globals.css";
 import Header from "./header";
 import { useLocale } from "next-intl";
