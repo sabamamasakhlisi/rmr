@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 //generatemetadata according to locale spanish or english
 export const metadata: Metadata = {
-  title: "Rosa Mota Robles | Graphic Designer",
+  title: "rosa mota robles",
   description:
     "Rosa Mota, Graphic Designer (MA Cultural Intelligence). Madrid-born, fluent in French & English. Experienced at cultural institutions (Pompidou, Bétonsalon). Passionate about design, art & exploring new creative fields ",
 };

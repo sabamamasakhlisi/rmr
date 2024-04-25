@@ -33,6 +33,10 @@ body {
   padding: 2rem 3.5rem 0 3.5rem;
 }
 
+.font-64 {
+  font-size: 4rem;
+}
+
 .font-64px {
   font-size: 4rem;
   font-weight: 300;
@@ -57,7 +61,7 @@ body {
 .link-to {
   text-decoration: underline;
   cursor: pointer;
-  text-decoration-thickness: 1.5px;
+  /* text-decoration-thickness: 1.5px; */
 }
 
 .contact {
@@ -111,11 +115,14 @@ body {
   .rs-wrap {
     gap: 1rem;
   }
+  .font-64 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1146px) {
-  .rs-wrap {
-    flex-wrap: wrap;
+  .font-64 {
+    font-size: 2rem;
   }
   .rs-col {
     flex-direction: column;
@@ -127,5 +134,19 @@ body {
 @media (max-width: 768px) {
   .p-h {
     padding: 0 1.725rem 2rem 1.725rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .font-64 {
+    font-size: 1.625rem;
+  }
+
+  .font-34px {
+    font-size: 1.625rem;
+  }
+
+  .font-64px {
+    font-size: 1.625rem;
   }
 }

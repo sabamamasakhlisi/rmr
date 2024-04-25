@@ -11,7 +11,7 @@ const space_mono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rosa Mota Robles | Graphic Designer",
+  title: "rosa mota robles",
   description:
     "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
 };
