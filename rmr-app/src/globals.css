@@ -135,6 +135,9 @@ body {
   .p-h {
     padding: 0 1.725rem 2rem 1.725rem;
   }
+  .font-64px {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 490px) {
@@ -148,5 +151,9 @@ body {
 
   .font-64px {
     font-size: 1.625rem;
+  }
+  .social {
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
   }
 }

@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header className="flex flex-row items-center gap-16 justify-between p-h w-full rs-col">
       <Link className={styles.title} href="/">
-        {<strong>rosa</strong>}mtrbls
+        <span className={styles.titleRosa}>rosa</span>mtrbls
       </Link>
       <div className="flex flex-row items-center justify-center gap-8 w-full">
         <Menu />

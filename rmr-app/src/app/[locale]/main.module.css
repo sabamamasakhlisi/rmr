@@ -7,6 +7,10 @@
   margin: 0 0.25em;
 }
 
+.titleRosa {
+  font-weight: 700;
+}
+
 .mainSubtitle {
   font-size: 2.5rem;
   padding: 0 3.5rem 4rem 3.5rem;
@@ -36,10 +40,24 @@
   .mainSubtitle {
     padding: 0 1.725rem 2rem 1.725rem;
   }
-  .mainSection {
-    flex-direction: column;
-  }
+
   .mainSection div {
+    font-size: 2rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    min-height: 312px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 325px) {
+  .mainSubtitle {
+    font-size: 2rem;
+  }
+
+  .title {
     font-size: 3rem;
   }
 }

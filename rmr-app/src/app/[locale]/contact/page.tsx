@@ -20,14 +20,14 @@ export default function Contact() {
   return (
     <section className={styles.contactSection}>
       <div className={`txt-og ${styles.txtTouch}`}>{"let's get in touch!"}</div>
-      <div className={`font-64 ${space_mono.className}`}>
+      <div className={`${styles.contactMail} ${space_mono.className}`}>
         <a href="mailto:rosamtrbls[@]gmail.com">
           rosamtrbls<span className={styles.brac}>{"["}</span>@
           <span className={styles.brac}>{"]"}</span>
           gmail.com
         </a>
       </div>
-      <div className="flex justify-center items-center font-64">
+      <div className="social flex justify-center items-center font-64">
         <a
           className="txt-yl link-to"
           href="https://www.behance.net/rosevalle"
