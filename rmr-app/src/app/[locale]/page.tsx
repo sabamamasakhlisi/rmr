@@ -10,33 +10,35 @@ export default function Home() {
   return (
     <main className="flex-1 flex flex-col">
       <p className={styles.mainSubtitle} aria-label="short-summery">
-        <span className={styles.firstRow}>
-          <span className="txt-gr">{t("mainSummeryFirst")}</span>
-          <span className={styles.subtitleDivider}>/</span>
-          <span className="txt-yl">{t("mainSummerySecond")}</span>
-          <span className={styles.subtitleDivider}>/</span>
-        </span>
-        <span className={styles.secondRow}>
-          <span className="txt-pr">{t("mainSummeryThird")}</span>
-          <span className={styles.subtitleDivider}>/</span>
-          <span className="txt-og">{t("mainSummeryFourth")}</span>
-          <span className={styles.subtitleDivider}>/</span>
-          <span className="txt-pn">{t("mainSummeryFifth")}</span>
-        </span>
+        {/* <span className={styles.firstRow}> */}
+        <span className="txt-gr">{t("mainSummeryFirst")}</span>
+        <span className={styles.subtitleDivider}>/</span>
+        <span className="txt-yl">{t("mainSummerySecond")}</span>
+        <span className={styles.subtitleDivider}>/</span>
+        {/* </span> */}
+        {/* <span className={styles.secondRow}> */}
+        <span className="txt-pr">{t("mainSummeryThird")}</span>
+        <span className={styles.subtitleDivider}>/</span>
+        <span className="txt-og">{t("mainSummeryFourth")}</span>
+        <span className={styles.subtitleDivider}>/</span>
+        <span className="txt-pn">{t("mainSummeryFifth")}</span>
+        {/* </span> */}
       </p>
       <section
         className={`${styles.mainSection} main-section flex-1 flex`}
         aria-label="Main Content"
       >
-        <div className="bg-pn txt-dark-br" aria-label={t("about")}>
-          <Link href={`${locale}/about`}>{t("about")}</Link>
-        </div>
-        <div className="bg-gr txt-dark-gr" aria-label={t("work")}>
-          <Link href={`${locale}/work`}>{t("work")}</Link>
-        </div>
-        <div className="bg-pr txt-dark-pr" aria-label={t("contact")}>
-          <Link href={`${locale}/contact`}>{t("contact")}</Link>
-        </div>
+        <Link className="bg-pn txt-dark-br" href={`${locale}/about`}>
+          <div aria-label={t("about")}>{t("about")}</div>
+        </Link>
+        <Link className="bg-gr txt-dark-gr" href={`${locale}/work`}>
+          <div className="bg-gr txt-dark-gr" aria-label={t("work")}>
+            {t("work")}
+          </div>
+        </Link>
+        <Link className="bg-pr txt-dark-pr" href={`${locale}/contact`}>
+          <div aria-label={t("contact")}>{t("contact")}</div>
+        </Link>
       </section>
     </main>
   );

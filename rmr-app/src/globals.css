@@ -111,6 +111,11 @@ body {
   color: #ffb0be;
 }
 
+.image4,
+.image5 {
+  transform: rotate(90deg);
+}
+
 @media (max-width: 1386px) {
   .rs-wrap {
     gap: 1rem;
