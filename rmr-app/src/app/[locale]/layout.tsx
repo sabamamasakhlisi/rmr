@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "rosa mota robles",
   description:
     "Rosa Mota, Graphic Designer (MA Cultural Intelligence). Madrid-born, fluent in French & English. Experienced at cultural institutions (Pompidou, Bétonsalon). Passionate about design, art & exploring new creative fields ",
+  verification: {
+    google: "4qVG4eC2XyE24J56Grt_XS7sVqOL-_FI_gowb1gle90",
+  },
 };
 
 export default function RootLayout({
