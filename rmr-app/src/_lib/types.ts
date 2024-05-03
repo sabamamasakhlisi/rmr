@@ -1,6 +1,7 @@
 export type MenuItem = {
   id: number;
   name: string;
+  value: string;
 };
 
 export enum Locales {

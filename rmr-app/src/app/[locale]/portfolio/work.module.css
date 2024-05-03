@@ -1,0 +1,28 @@
+.workSection {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 7.5rem;
+  margin-top: 2rem;
+  border-radius: 1.225rem;
+}
+
+.workSection img {
+  cursor: pointer;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.hoverContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 500px) {
+  .workSection {
+    grid-template-columns: inherit;
+  }
+}

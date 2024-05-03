@@ -1,10 +1,11 @@
 "use client";
-import { HOME_URL_LENGTH, MENU_LIST } from "@/_lib/constnats";
+import { HOME_URL_LENGTH } from "@/_lib/constnats";
 import Link from "next/link";
 
 import { usePathname } from "next/navigation";
 import { useLocale } from "next-intl";
-export default function Menu() {
+import { MenuItem } from "@/_lib/types";
+export default function Menu({ list }: { list: MenuItem[] }) {
   const pathname = usePathname();
   const locale = useLocale();
 
@@ -15,15 +16,24 @@ export default function Menu() {
           role="menubar"
           className="flex flex-row items-center gap-32 text-xl font-64px w-full rs-wrap"
         >
-          {MENU_LIST.map((item) => (
+          {list.map((item) => (
             <li
               key={item.id}
               role="menuitem"
-              className={`${item.name} ${
-                pathname.split("/").at(-1) === item.name ? "active" : ""
+              className={`${item.value} ${
+                pathname.split("/").at(-1) === item.value ||
+                pathname.split("/").at(-1) === item.name
+                  ? "active"
+                  : ""
               }`}
             >
-              <Link href={`/${locale}/${item.name}`}>{item.name}</Link>
+              <Link
+                href={`/${locale}/${
+                  item.value === "work" ? item.name : item.value
+                }`}
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>

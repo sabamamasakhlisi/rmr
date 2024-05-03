@@ -3,15 +3,18 @@ import { MenuItem } from "./types";
 export const MENU_LIST: MenuItem[] = [
   {
     id: 1,
-    name: "work",
+    name: "about",
+    value: "about",
   },
   {
     id: 2,
-    name: "about",
+    name: "work",
+    value: "work",
   },
   {
     id: 3,
     name: "contact",
+    value: "contact",
   },
 ];
 

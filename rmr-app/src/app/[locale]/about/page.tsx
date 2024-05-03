@@ -22,7 +22,13 @@ export default function About() {
       className={`p-h ${space_mono.className} ${styles.section}  rs-col`}
     >
       <div className={styles.me}>
-        <Image src="/rosa.png" alt="Rosa Picture" width={336} height={448} />
+        <Image
+          src="/rosa.png"
+          alt="Rosa Picture"
+          width={336}
+          height={448}
+          quality={100}
+        />
         <div className={styles.about}>
           <p className="txt-pn">
             HEY! <span>MY NAME IS ROSA.</span>
