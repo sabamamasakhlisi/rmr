@@ -19,6 +19,7 @@ export default function Libros() {
         <Image
           src="/personidas.jpeg"
           width={860}
+          priority={true}
           height={600}
           quality={100}
           alt="CUARENTA Y TRES PERSONAS, EN VERANO, EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO."

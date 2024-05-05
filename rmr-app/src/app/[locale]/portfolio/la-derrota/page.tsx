@@ -13,7 +13,7 @@ export default function Libros() {
           url={
             "https://player.vimeo.com/video/906343213?badge=0&amp;player_id=0&amp;app_id=58479"
           }
-          width={860}
+          width="100%"
           height={600}
           controls
           light="/main-derrota.png"
@@ -61,6 +61,7 @@ export default function Libros() {
               width={600}
               height={400}
               quality={100}
+              priority={true}
               alt="la derrota gif"
               className="mx-auto"
             />
