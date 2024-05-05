@@ -116,6 +116,43 @@ body {
   transform: rotate(90deg);
 }
 
+.c {
+  color: #ffd88c;
+}
+
+.om {
+  color: #ffb68c;
+}
+.i {
+  color: #ffa78b;
+}
+.a {
+  color: #d3b0ff;
+}
+.ngb {
+  color: #ffb0be;
+}
+
+.cks {
+  color: #a3b4ff;
+}
+
+.ol {
+  color: #7ce6fe;
+}
+
+.on {
+  color: #b7ffd4;
+}
+
+.it {
+  font-style: italic !important;
+}
+
+.sign {
+  color: #fff491;
+}
+
 @media (max-width: 1386px) {
   .rs-wrap {
     gap: 1rem;

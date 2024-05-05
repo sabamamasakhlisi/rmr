@@ -4,6 +4,7 @@ import "../../globals.css";
 import Header from "./header";
 import { useLocale } from "next-intl";
 import Image from "next/image";
+import CommingSoon from "./coming-soon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,15 +29,7 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <Header /> */}
         {/* {children} */}
-        <Image
-          src="/soon.png"
-          style={{ width: "100vw", height: "100vh" }}
-          alt={"soon page"}
-          width={900}
-          height={700}
-          priority={true}
-          quality={100}
-        />
+        <CommingSoon />
       </body>
     </html>
   );

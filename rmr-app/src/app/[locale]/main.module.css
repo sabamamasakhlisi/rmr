@@ -7,6 +7,14 @@
   margin: 0 0.25em;
 }
 
+.soon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  font-size: 2.5rem;
+}
+
 .titleRosa {
   font-weight: 700;
 }
@@ -39,6 +47,10 @@
 @media (max-width: 768px) {
   .mainSubtitle {
     padding: 0 1.725rem 2rem 1.725rem;
+  }
+
+  .soon {
+    font-size: 1.625rem;
   }
 
   .mainSection a {
