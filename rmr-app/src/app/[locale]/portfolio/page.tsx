@@ -4,7 +4,14 @@ import styles from "./work.module.css";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
-import { images } from "./constants";
+import { HoveredImage, images } from "./constants";
+import { Space_Mono } from "next/font/google";
+
+const space_mono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-space",
+  weight: "400",
+});
 
 export default function Work() {
   const [isHovering, setIsHovered] = useState(0);
@@ -12,26 +19,123 @@ export default function Work() {
   const router = useRouter();
   const locale = useLocale();
 
-  const renderByHovered = (id: number) => {
-    const hoveredImage = images.find((image) => image.id === id);
-    if (!hoveredImage) return null;
-    if (hoveredImage.id === 1) {
-      return (
-        <Image
-          src={"/laderrota.gif"}
-          width={hoveredImage.width}
-          height={hoveredImage.height}
-          alt={"gif"}
-          quality={100}
-          className={styles.hoverContainer}
-        />
-      );
+  const renderContentById = (id: number, hoveredImage: any) => {
+    switch (id) {
+      case 1:
+        return (
+          <>
+            <div>
+              <h3 className="txt-yl fs-24">
+                <span className="fw-4">
+                  {hoveredImage[locale]?.light ?? ""}
+                </span>
+                <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+              </h3>
+              <p className="mu-1 fs-1">{hoveredImage[locale].description}</p>
+            </div>
+            <p className="txt-og">{hoveredImage.year}</p>
+          </>
+        );
+      case 2:
+        return (
+          <>
+            <div>
+              <h3 className="txt-yl fs-24">
+                <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+                <span>{hoveredImage[locale]?.light ?? ""}</span>
+              </h3>
+              <p className="mu-1 fs-1">{hoveredImage[locale].description}</p>
+            </div>
+            <p className="txt-og">{hoveredImage.year}</p>
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <div>
+              <h3 className="txt-yl fs-24">
+                <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+                <span>{hoveredImage[locale]?.light ?? ""}</span>
+              </h3>
+              <p className="mu-1 fs-1">{hoveredImage[locale].description}</p>
+            </div>
+            <p className="txt-og">{hoveredImage.year}</p>
+          </>
+        );
+      case 4:
+        return (
+          <>
+            <div>
+              <h3 className="txt-yl fs-24">
+                <span className="fw-7">
+                  {hoveredImage[locale]?.light ?? ""}
+                </span>
+                <span>{hoveredImage[locale]?.dark ?? ""}</span>
+                <span>{hoveredImage[locale]?.addon ?? ""}</span>
+              </h3>
+              <p className="mu-1 fs-1">
+                {hoveredImage[locale]?.description ?? ""}
+              </p>
+            </div>
+            <p className="txt-og">{hoveredImage.year}</p>
+          </>
+        );
+      case 5:
+        return <></>;
+      case 6:
+        return (
+          <>
+            <div>
+              {locale === "en" ? (
+                <h3 className="txt-yl fs-24">
+                  <span className="fw-7">book design</span>
+                  <span>
+                    for <span className="link-to">@jaragarciaazor</span>’s
+                    documental photography zine
+                  </span>
+                </h3>
+              ) : (
+                <h3 className="txt-yl fs-24">
+                  <span className="fw-7">diseño tipográfico</span>
+                  <span>
+                    para el fanzine de fotografía documental de{" "}
+                    <span className="link-to">@jaragarciaazor</span>
+                  </span>
+                </h3>
+              )}
+              <p className="mu-1 fs-1">
+                {hoveredImage[locale]?.description || hoveredImage?.description}
+              </p>
+            </div>
+            <p className="txt-og">{hoveredImage.year}</p>
+          </>
+        );
+      case 7:
+        return <div></div>;
+      case 8:
+        return <div></div>;
     }
-    return <div className={styles.hoverContainer}>{hoveredImage.alt}</div>;
+  };
+
+  const renderByHovered = (id: number) => {
+    const hoveredImage: HoveredImage = images.find(
+      (image) => image.id === id
+    ) as unknown as HoveredImage;
+    if (!hoveredImage) return null;
+
+    return (
+      <div
+        className={`${styles.hoverContainer} ${
+          id === 4 || id === 5 ? styles.revertTransform : ""
+        } flex`}
+      >
+        {renderContentById(id, hoveredImage)}
+      </div>
+    );
   };
 
   return (
-    <section className={styles.workSection}>
+    <section className={`${styles.workSection} ${space_mono.className}`}>
       {images.map((image, index) => (
         <div
           key={index}
@@ -48,6 +152,8 @@ export default function Work() {
             height={image.height}
             alt={image.alt}
             quality={100}
+            priority={true}
+            className={`${isHovering === image.id ? styles.hoverOpacity : ""}`}
           />
           {isHovering === image.id && renderByHovered(image.id)}
         </div>
