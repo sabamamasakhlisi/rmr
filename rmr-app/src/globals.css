@@ -140,6 +140,10 @@ body {
   transform: rotate(90deg);
 }
 
+.sec-lay {
+  margin: 0 auto;
+}
+
 @media (max-width: 1386px) {
   .rs-wrap {
     gap: 1rem;

@@ -103,6 +103,14 @@ export const images = [
     description:
       "< CUARENTA Y TRES PERSONAS, EN VERANO, EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO. >",
     year: 2020,
+    en: {
+      about:
+        "LA DERROTA is a short film about the fear of disappearing, of impersonation,and of oneself.",
+    },
+    es: {
+      about:
+        "LA DERROTA is a short film about the fear of disappearing, of impersonation,and of oneself.",
+    },
   },
   {
     id: 7,

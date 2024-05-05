@@ -9,3 +9,11 @@
   color: var(--light-text-offwhite);
   cursor: pointer;
 }
+
+.portfolioSection {
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: content-box;
+}

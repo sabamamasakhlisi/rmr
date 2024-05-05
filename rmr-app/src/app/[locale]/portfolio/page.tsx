@@ -90,7 +90,7 @@ export default function Work() {
                 <h3 className="txt-yl fs-24">
                   <span className="fw-7">book design</span>
                   <span>
-                    for <span className="link-to">@jaragarciaazor</span>’s
+                    for @<span className="link-to">jaragarciaazor</span>’s
                     documental photography zine
                   </span>
                 </h3>
@@ -98,8 +98,8 @@ export default function Work() {
                 <h3 className="txt-yl fs-24">
                   <span className="fw-7">diseño tipográfico</span>
                   <span>
-                    para el fanzine de fotografía documental de{" "}
-                    <span className="link-to">@jaragarciaazor</span>
+                    para el fanzine de fotografía documental de @
+                    <span className="link-to">jaragarciaazor</span>
                   </span>
                 </h3>
               )}
@@ -116,11 +116,8 @@ export default function Work() {
         return <div></div>;
     }
   };
-
   const renderByHovered = (id: number) => {
-    const hoveredImage: HoveredImage = images.find(
-      (image) => image.id === id
-    ) as unknown as HoveredImage;
+    const hoveredImage = images.find((image) => image.id === id);
     if (!hoveredImage) return null;
 
     return (
@@ -135,22 +132,32 @@ export default function Work() {
   };
 
   return (
-    <section className={`${styles.workSection} ${space_mono.className}`}>
+    <section className={`${styles.workSection} p-h`}>
       {images.map((image, index) => (
         <div
           key={index}
           onMouseEnter={() => setIsHovered(image.id)}
           onMouseLeave={() => setIsHovered(0)}
-          className={`${styles.imageContainer} image${index + 1}`}
           onClick={() =>
             image?.path && router.push(`/${locale}/portfolio/${image?.path}`)
           }
+          className={`${styles.imageContainer} ${space_mono.className} image${
+            index + 1
+          }`}
+          tabIndex={0}
+          role="button"
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              if (image?.path)
+                router.push(`/${locale}/portfolio/${image?.path}`);
+            }
+          }}
         >
           <Image
             src={image.src}
             width={image.width}
             height={image.height}
-            alt={image.alt}
+            alt={image.alt || "Image"}
             quality={100}
             priority={true}
             className={`${isHovering === image.id ? styles.hoverOpacity : ""}`}
