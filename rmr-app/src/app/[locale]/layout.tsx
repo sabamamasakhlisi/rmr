@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../../globals.css";
 import Header from "./header";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +26,17 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header />
-        {children}
+        {/* <Header /> */}
+        {/* {children} */}
+        <Image
+          src="/soon.png"
+          style={{ width: "100vw", height: "100vh" }}
+          alt={"soon page"}
+          width={900}
+          height={700}
+          priority={true}
+          quality={100}
+        />
       </body>
     </html>
   );
