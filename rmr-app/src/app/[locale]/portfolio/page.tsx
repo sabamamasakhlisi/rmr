@@ -120,7 +120,6 @@ export default function Work() {
     imageRefs.current.forEach((imageRef) => {
       const observer = new IntersectionObserver((entries) => {
         const imageEntry = entries[0];
-        console.log(imageEntry);
         if (imageEntry.isIntersecting) {
           setIsHovered(
             imageEntry.intersectionRect.x === 0 ? 1 : +imageEntry.target.id
@@ -133,7 +132,6 @@ export default function Work() {
 
     return () => observers.forEach((observer) => observer.disconnect());
   }, [imageRefs]);
-  console.log(isHovering);
   const router = useRouter();
   const locale = useLocale();
 
