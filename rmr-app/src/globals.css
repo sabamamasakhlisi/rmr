@@ -171,6 +171,9 @@ body {
   .font-64px {
     font-size: 3rem;
   }
+  .fs-24 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 490px) {

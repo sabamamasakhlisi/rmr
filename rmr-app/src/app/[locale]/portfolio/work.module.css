@@ -41,8 +41,11 @@
   opacity: 0.1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 750px) {
   .workSection {
     grid-template-columns: inherit;
+  }
+  .workSection img {
+    height: auto;
   }
 }
