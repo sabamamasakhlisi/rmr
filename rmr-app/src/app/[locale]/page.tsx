@@ -28,7 +28,7 @@ export default function Home() {
           <div aria-label={t("about")}>{t("about")}</div>
         </Link>
         <Link className="bg-gr txt-dark-gr" href={`${locale}/portfolio`}>
-          <div className="bg-gr txt-dark-gr" aria-label={t("work")}>
+          <div className="bg-gr" aria-label={t("work")}>
             {t("work")}
           </div>
         </Link>

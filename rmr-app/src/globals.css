@@ -135,9 +135,23 @@ body {
   color: #ffb0be;
 }
 
+.main-section a:hover {
+  font-size: 5rem;
+  color: #fff491;
+}
+
+.main-section a {
+  transition: font-size 1s ease-in-out;
+}
+
 .image4,
 .image5 {
   transform: rotate(90deg);
+}
+
+.image5 {
+  opacity: 0;
+  z-index: -1;
 }
 
 .sec-lay {
@@ -165,6 +179,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .image5 {
+    display: none;
+  }
   .p-h {
     padding: 0 1.725rem 2rem 1.725rem;
   }
@@ -177,6 +194,10 @@ body {
 }
 
 @media (max-width: 490px) {
+  .gap-8 {
+    gap: 1rem;
+  }
+
   .font-64 {
     font-size: 1.625rem;
   }
@@ -190,7 +211,7 @@ body {
   }
 
   .font-64px {
-    font-size: 1.625rem;
+    font-size: 1.5rem;
   }
   .social {
     flex-direction: column-reverse;

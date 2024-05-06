@@ -64,6 +64,7 @@ export default function Libros() {
               priority={true}
               alt="la derrota gif"
               className="mx-auto"
+              unoptimized
             />
             <p>
               {locale === "en"

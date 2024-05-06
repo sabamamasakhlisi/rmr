@@ -112,26 +112,6 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
 export default function Work() {
   const [isHovering, setIsHovered] = useState(0);
 
-  const imageRefs = useRef([]);
-
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-
-    imageRefs.current.forEach((imageRef) => {
-      const observer = new IntersectionObserver((entries) => {
-        const imageEntry = entries[0];
-        if (imageEntry.isIntersecting) {
-          setIsHovered(
-            imageEntry.intersectionRect.x === 0 ? 1 : +imageEntry.target.id
-          );
-        }
-      });
-      observers.push(observer);
-      observer.observe(imageRef);
-    });
-
-    return () => observers.forEach((observer) => observer.disconnect());
-  }, [imageRefs]);
   const router = useRouter();
   const locale = useLocale();
 
@@ -159,7 +139,6 @@ export default function Work() {
           onMouseLeave={() => setIsHovered(0)}
           id={"" + (index + 1)}
           //@ts-ignore
-          ref={(el: any) => (imageRefs.current[index] = el)}
           onClick={() =>
             image?.path && router.push(`/${locale}/portfolio/${image?.path}`)
           }
