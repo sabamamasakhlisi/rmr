@@ -138,7 +138,7 @@ body {
 }
 
 .ol {
-  color: #7ce6fe;
+  color: #a3d8ff;
 }
 
 .on {
@@ -151,6 +151,10 @@ body {
 
 .sign {
   color: #fff491;
+}
+
+.excl {
+  color: var(--light-yellow);
 }
 
 @media (max-width: 1386px) {
