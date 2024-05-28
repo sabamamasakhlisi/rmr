@@ -1,19 +1,16 @@
-.currentLang {
-  font-weight: 600;
-  color: var(--text-offwhite);
-  cursor: pointer;
+.mainSubtitle {
+  font-size: 2.5rem;
+  padding: 0 3.5rem 4rem 3.5rem;
 }
 
-.languageText {
-  font-weight: 400;
-  color: var(--light-text-offwhite);
-  cursor: pointer;
+@media (max-width: 768px) {
+  .mainSubtitle {
+    padding: 0 1.725rem 2rem 1.725rem;
+  }
 }
 
-.portfolioSection {
-  max-width: 860px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  box-sizing: content-box;
+@media (max-width: 325px) {
+  .mainSubtitle {
+    font-size: 2rem;
+  }
 }

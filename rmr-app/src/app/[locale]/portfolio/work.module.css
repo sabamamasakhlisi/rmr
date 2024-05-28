@@ -10,7 +10,7 @@
 .workSection img {
   cursor: pointer;
   height: 381px;
-  border-radius: 20px;
+  object-fit: cover;
 }
 
 .imageContainer {
@@ -39,6 +39,11 @@
 
 .hoverOpacity {
   opacity: 0.1;
+}
+
+.image7 {
+  width: 368px;
+  height: 564px;
 }
 
 @media (max-width: 750px) {

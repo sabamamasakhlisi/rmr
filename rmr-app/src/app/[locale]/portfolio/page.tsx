@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { images } from "./constants";
 
-import { useEffect, useRef } from "react";
 import { Space_Mono } from "next/font/google";
 
 const space_mono = Space_Mono({
@@ -25,7 +24,7 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
               <span className="fw-4">{hoveredImage[locale]?.light ?? ""}</span>
               <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
             </h3>
-            <p className="mu-1 fs-1">{hoveredImage[locale].description}</p>
+            <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
           </div>
           <p className="txt-og">{hoveredImage.year}</p>
         </>
@@ -38,7 +37,7 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
               <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
               <span>{hoveredImage[locale]?.light ?? ""}</span>
             </h3>
-            <p className="mu-1 fs-1">{hoveredImage[locale].description}</p>
+            <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
           </div>
           <p className="txt-og">{hoveredImage.year}</p>
         </>
@@ -122,7 +121,7 @@ export default function Work() {
     return (
       <div
         className={`${styles.hoverContainer} ${
-          id === 4 || id === 5 ? styles.revertTransform : ""
+          id === 4 || id === 7 ? styles.revertTransform : ""
         } flex`}
       >
         {renderContentById(id, hoveredImage, locale)}

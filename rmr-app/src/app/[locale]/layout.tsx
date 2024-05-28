@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
 
-//generatemetadata according to locale spanish or english
+// generatemetadata according to locale spanish or english
 export const metadata: Metadata = {
   title: "rosa mota robles",
   description:

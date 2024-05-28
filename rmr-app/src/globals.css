@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  cursor: url("../public/cursor.svg") 16 16, pointer !important;
+}
+
 :root {
   --text-offwhite: #e8e8e8;
   --light-text-offwhite: #e8e8e87a;
@@ -107,6 +111,59 @@ body {
   background-color: var(--light-purple);
 }
 
+@keyframes fill-background {
+  0% {
+    background-position: left bottom; /* Starts at the bottom right */
+  }
+  100% {
+    background-position: right top; /* Fills bottom to top at the end */
+  }
+}
+
+.link-left-to-right {
+  background: linear-gradient(to right, transparent 50%, var(--light-pink) 50%);
+  background-size: 200% 100%;
+  animation: fill-background 2s ease-in-out forwards;
+}
+
+.link-right-to-left {
+  background: linear-gradient(
+    to left,
+    transparent 50%,
+    var(--light-purple) 50%
+  );
+  background-size: 200% 100%;
+  animation: fill-left-right 2s ease-in-out;
+}
+
+@keyframes fill-left-right {
+  0% {
+    background-position: right bottom;
+  }
+  100% {
+    background-position: left top;
+  }
+}
+
+.fill-animation {
+  background: linear-gradient(
+    to bottom,
+    var(--light-green) 50%,
+    transparent 50%
+  );
+  background-size: 100% 200%;
+  animation: fill-bottom-top 2s ease-in-out;
+}
+
+@keyframes fill-bottom-top {
+  0% {
+    background-position: bottom right; /* Starts at the bottom right */
+  }
+  100% {
+    background-position: top right; /* Fills bottom to top at the end */
+  }
+}
+
 .txt-dark-br {
   color: var(--dark-pink);
 }
@@ -135,23 +192,18 @@ body {
   color: #ffb0be;
 }
 
-.main-section a:hover {
-  font-size: 5rem;
-  color: #fff491;
+.main-section a:nth-child(1):hover {
+  color: var(--light-yellow);
+}
+.main-section a:nth-child(2):hover {
+  color: white;
+}
+.main-section a:nth-child(3):hover {
+  color: var(--light-orange);
 }
 
-.main-section a {
-  transition: font-size 1s ease-in-out;
-}
-
-.image4,
-.image5 {
+.image4 {
   transform: rotate(90deg);
-}
-
-.image5 {
-  opacity: 0;
-  z-index: -1;
 }
 
 .sec-lay {
@@ -179,9 +231,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .image5 {
-    display: none;
-  }
   .p-h {
     padding: 0 1.725rem 2rem 1.725rem;
   }

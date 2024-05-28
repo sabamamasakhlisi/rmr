@@ -1,7 +1,9 @@
+"use client";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { Metadata } from "next";
 import Image from "next/image";
 import styles from "./contact.module.css";
-
 import { Space_Mono } from "next/font/google";
 
 const space_mono = Space_Mono({
@@ -10,17 +12,171 @@ const space_mono = Space_Mono({
   weight: "400",
 });
 
-export const metadata: Metadata = {
-  title: "rosa mota robles",
-  description:
-    "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
-};
-
 export default function Contact() {
+  useEffect(() => {
+    gsap.fromTo(
+      [titleRef.current, headerRef.current],
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.5, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+      linksRef.current,
+      { y: 400, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+      linksRefOne.current,
+      { x: -400, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+      linksRefTwo.current,
+      { x: 400, opacity: 0 },
+      { x: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" }
+    );
+
+    gsap.fromTo(
+      heartRef.current,
+      { y: 0, opacity: 0 },
+      {
+        opacity: 1,
+        scale: 1.5,
+        x: 0,
+        y: 0,
+        duration: 1.5,
+        delay: 1,
+        ease: "elastic.out(3, 1)",
+      }
+    );
+
+    gsap.fromTo(
+      littleStar.current,
+      { opacity: 0, scale: 0, x: -600, y: 100 },
+      {
+        opacity: 1,
+        scale: 1.5,
+        x: -600,
+        y: 100,
+        duration: 1.5,
+        ease: "elastic.out(2, 0.5)",
+      }
+    );
+
+    gsap.fromTo(
+      littleContact.current,
+      { opacity: 0, scale: 0, x: 600, y: 100 },
+      {
+        opacity: 1,
+        scale: 1.5,
+        x: 600,
+        y: 100,
+        duration: 1.5,
+        ease: "elastic.out(2, 0.5)",
+      }
+    );
+
+    gsap.to(littleStar.current, {
+      y: 75,
+      duration: 1.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: 1.5,
+    });
+
+    gsap.to(littleContact.current, {
+      x: 575,
+      duration: 1.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: 1.5,
+    });
+
+    gsap.to(heartRef.current, {
+      y: -5,
+      duration: 1.5,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1,
+      delay: 1.5,
+    });
+  }, []);
+
+  const heartRef = useRef(null);
+  const linksRef = useRef(null);
+  const titleRef = useRef(null);
+  const headerRef = useRef(null);
+  const littleStar = useRef(null);
+  const littleContact = useRef(null);
+  const linksRefTwo = useRef(null);
+  const linksRefOne = useRef(null);
+
+  // useEffect(() => {
+  //   const timeline = gsap.timeline({
+  //     defaults: { duration: 0.8, ease: "bounce.out" }, // Adjusted duration and ease for a more pronounced jump
+  //   });
+
+  //   // Stagger the animation for each element, creating a cascading effect
+  //   timeline.fromTo(
+  //     [heartRef.current, headerRef.current, linksRef.current, titleRef.current],
+  //     { y: 100, opacity: 0 },
+  //     { y: 0, opacity: 1 }
+  //   );
+  //   gsap.fromTo(
+  //     littleStar.current,
+  //     { opacity: 0, scale: 0, x: 0, y: 0, x: -600, y: 100 },
+  //     {
+  //       opacity: 1,
+  //       scale: 1.5,
+  //       x: -600,
+  //       y: 100,
+  //       duration: 1.5,
+  //       ease: "elastic.out(2, 0.5)",
+  //     }
+  //   );
+  //   gsap.fromTo(
+  //     littleContact.current,
+  //     { opacity: 0, scale: 0, x: 600, y: 100 },
+  //     {
+  //       opacity: 1,
+  //       scale: 1.5,
+  //       x: 600,
+  //       y: 100,
+  //       duration: 1.5,
+  //       ease: "elastic.out(2, 0.5)",
+  //     }
+  //   );
+  // }, []);
+
   return (
     <section className={styles.contactSection}>
-      <div className={`txt-og ${styles.txtTouch}`}>{"let's get in touch!"}</div>
-      <div className={`${styles.contactMail} ${space_mono.className}`}>
+      <Image
+        ref={littleStar}
+        className={styles.littleStar}
+        src="/little-star.svg"
+        alt="little-star"
+        width={55}
+        height={55}
+      />
+      <div ref={titleRef} className={`txt-og ${styles.txtTouch}`}>
+        {"let's get in touch!"}
+      </div>
+      <Image
+        ref={littleContact}
+        className={styles.littleContact}
+        src="/little-contact.svg"
+        alt="little-contact"
+        width={55}
+        height={55}
+      />
+      <div
+        className={`${styles.contactMail} ${space_mono.className}`}
+        ref={headerRef}
+      >
         <a href="mailto:rosamtrbls[@]gmail.com">
           rosamtrbls<span className={styles.brac}>{"["}</span>@
           <span className={styles.brac}>{"]"}</span>
@@ -29,13 +185,15 @@ export default function Contact() {
       </div>
       <div className="social flex justify-center items-center font-64">
         <a
-          className="txt-yl link-to"
+          className={`txt-yl link-to ${space_mono.className}`}
           href="https://www.behance.net/rosevalle"
           target="_blank"
+          ref={linksRefOne}
         >
           BEHANCE
         </a>
         <Image
+          ref={heartRef}
           className={styles.heart}
           src="/heart.svg"
           alt="heart"
@@ -43,16 +201,17 @@ export default function Contact() {
           height={55}
         />
         <a
-          className="txt-yl link-to"
+          className={`txt-yl link-to ${space_mono.className}`}
           href="https://www.linkedin.com/in/rosa-mota-robles/"
           target="_blank"
+          ref={linksRefTwo}
         >
           LINKEDIN
         </a>
       </div>
-      <div className="font-64 txt-yl">
+      <div ref={linksRef} className="font-64 txt-yl">
         <a
-          className="link-to"
+          className={`link-to ${space_mono.className}`}
           href="https://www.instagram.com/rosamtrbls/"
           target="_blank"
         >
