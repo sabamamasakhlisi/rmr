@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./main.module.css";
 import { useLocale, useTranslations } from "next-intl";
 import MainTitle from "./components/main_title";
-import { useEffect } from "react";
 
 export default function Home() {
   const t = useTranslations();

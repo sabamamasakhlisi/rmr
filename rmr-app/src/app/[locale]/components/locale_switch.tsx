@@ -16,9 +16,12 @@ export default function LanguageSwitch() {
   const switchHandler = (e: React.MouseEvent) => {
     const selectedLanguage = (e.target as HTMLElement).innerText;
     if (locale !== selectedLanguage) {
-      const page = pathName.split("/").at(-1);
+      const roots = pathName.split("/");
+      const page = roots.at(-1);
       if (page?.length === 2) {
         router.replace(`/${selectedLanguage}`);
+      } else if (roots.length > 3) {
+        router.replace(`/${selectedLanguage}/${roots.at(-2)}/${page}`);
       } else router.replace(`/${selectedLanguage}/${page}`);
     }
   };

@@ -22,13 +22,13 @@ export default function MainTitle({
     <>
       <p className={styles.mainSubtitle} aria-label="short-summery">
         <span className="txt-gr">{firstSpan}</span>
-        <span className={styles.subtitleDivider}>/</span>
+        <span className={styles.subtitleDivider}> / </span>
         <span className="txt-yl">{secondSpan}</span>
-        <span className={styles.subtitleDivider}>/</span>
+        <span className={styles.subtitleDivider}> / </span>
         <span className="txt-pr">{thirdSpan}</span>
-        <span className={styles.subtitleDivider}>/</span>
+        <span className={styles.subtitleDivider}> / </span>
         <span className="txt-og">{fourthSpan}</span>
-        <span className={styles.subtitleDivider}>/</span>
+        <span className={styles.subtitleDivider}> / </span>
         <Typewriter
           options={{
             strings: [fifthSpan, fifthSpanAddon],

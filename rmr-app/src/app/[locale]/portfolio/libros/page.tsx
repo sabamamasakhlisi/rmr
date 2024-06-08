@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { HoveredImage, images } from "../constants";
 import { useLocale } from "next-intl";
 import PortfolioContent from "../../components/portfolio_content";
 
@@ -20,6 +19,7 @@ export default function Libros() {
           src="/personidas.jpeg"
           width={860}
           priority={true}
+          className="main-image"
           height={600}
           quality={100}
           alt="CUARENTA Y TRES PERSONAS, EN VERANO, EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO."
@@ -33,8 +33,8 @@ export default function Libros() {
       sectionContet={
         <>
           {locale === "en"
-            ? `LA DERROTA is a short film about the fear of disappearing,\nof impersonation,\nand of oneself..`
-            : "LA DERROTA is a short film about the fear of disappearing,\nof impersonation,\nand of oneself."}
+            ? `Book design for @jaragarciaazor’s documental photography zine between the US and China. `
+            : "Diseño tipográfico para el fanzine de fotografía documental de @jaragarciaazor"}
         </>
       }
       footerContent={
@@ -43,7 +43,7 @@ export default function Libros() {
           target="_blank"
           className="link-to txt-pr"
         >
-          Check out Jara’s website!
+          Check out Jara’s work!
         </a>
       }
     />

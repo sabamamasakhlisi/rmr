@@ -38,11 +38,11 @@ body {
 }
 
 .font-64 {
-  font-size: 4rem;
+  font-size: 3.425rem;
 }
 
 .font-64px {
-  font-size: 4rem;
+  font-size: 3.425rem;
   font-weight: 300;
 }
 
@@ -186,6 +186,10 @@ body {
 
 .txt-og {
   color: #ffb68c;
+}
+
+.main-image {
+  width: 100%;
 }
 
 .txt-pn {

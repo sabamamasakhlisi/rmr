@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import styles from "./contact.module.css";
 import { Space_Mono } from "next/font/google";
+import { useLocale } from "next-intl";
+import { Locales } from "@/_lib/types";
 
 const space_mono = Space_Mono({
   subsets: ["latin"],
@@ -13,6 +15,8 @@ const space_mono = Space_Mono({
 });
 
 export default function Contact() {
+  const locale = useLocale();
+
   useEffect(() => {
     gsap.fromTo(
       [titleRef.current, headerRef.current],
@@ -157,18 +161,18 @@ export default function Contact() {
       <Image
         ref={littleStar}
         className={styles.littleStar}
-        src="/little-star.svg"
+        src="/star.ico"
         alt="little-star"
         width={55}
         height={55}
       />
       <div ref={titleRef} className={`txt-og ${styles.txtTouch}`}>
-        {"let's get in touch!"}
+        {locale === Locales.EN ? "let's get in touch!" : "¿hablamos?"}
       </div>
       <Image
         ref={littleContact}
         className={styles.littleContact}
-        src="/little-contact.svg"
+        src="/message.ico"
         alt="little-contact"
         width={55}
         height={55}
@@ -195,7 +199,7 @@ export default function Contact() {
         <Image
           ref={heartRef}
           className={styles.heart}
-          src="/heart.svg"
+          src="/heart.ico"
           alt="heart"
           width={55}
           height={55}

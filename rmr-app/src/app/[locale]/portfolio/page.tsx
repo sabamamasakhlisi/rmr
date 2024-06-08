@@ -21,8 +21,8 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
         <>
           <div>
             <h3 className="txt-yl fs-24">
-              <span className="fw-4">{hoveredImage[locale]?.light ?? ""}</span>
               <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+              <span>{hoveredImage[locale]?.light ?? ""}</span>
             </h3>
             <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
           </div>
@@ -34,8 +34,8 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
         <>
           <div>
             <h3 className="txt-yl fs-24">
+              <span className="fw-4">{hoveredImage[locale]?.light ?? ""}</span>
               <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
-              <span>{hoveredImage[locale]?.light ?? ""}</span>
             </h3>
             <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
           </div>
@@ -72,14 +72,38 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
         </>
       );
     case 5:
-      return <></>;
+      return (
+        <>
+          <div>
+            <h3 className="txt-yl fs-24">
+              <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+              <span>{hoveredImage[locale]?.light ?? ""}</span>
+            </h3>
+            <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
+          </div>
+          <p className="txt-og">{hoveredImage.year}</p>
+        </>
+      );
     case 6:
+      return (
+        <>
+          <div>
+            <h3 className="txt-yl fs-24">
+              <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+              <span>{hoveredImage[locale]?.light ?? ""}</span>
+            </h3>
+            <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
+          </div>
+          <p className="txt-og">{hoveredImage.year}</p>
+        </>
+      );
+    case 7:
       return (
         <>
           <div>
             {locale === "en" ? (
               <h3 className="txt-yl fs-24">
-                <span className="fw-7">book design</span>
+                <span className="fw-7">book design </span>
                 <span>
                   for @<span className="link-to">jaragarciaazor</span>’s
                   documental photography zine
@@ -87,7 +111,7 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
               </h3>
             ) : (
               <h3 className="txt-yl fs-24">
-                <span className="fw-7">diseño tipográfico</span>
+                <span className="fw-7">diseño tipográfico </span>
                 <span>
                   para el fanzine de fotografía documental de @
                   <span className="link-to">jaragarciaazor</span>
@@ -101,10 +125,19 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
           <p className="txt-og">{hoveredImage.year}</p>
         </>
       );
-    case 7:
-      return <div></div>;
     case 8:
-      return <div></div>;
+      return (
+        <>
+          <div>
+            <h3 className="txt-yl fs-24">
+              <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
+              <span>{hoveredImage[locale]?.light ?? ""}</span>
+            </h3>
+            <p className="mu-1 fs-1">{hoveredImage[locale]?.description}</p>
+          </div>
+          <p className="txt-og">{hoveredImage.year}</p>
+        </>
+      );
   }
 };
 
@@ -119,11 +152,7 @@ export default function Work() {
     if (!hoveredImage) return null;
 
     return (
-      <div
-        className={`${styles.hoverContainer} ${
-          id === 4 || id === 7 ? styles.revertTransform : ""
-        } flex`}
-      >
+      <div className={`${styles.hoverContainer}  flex`}>
         {renderContentById(id, hoveredImage, locale)}
       </div>
     );
@@ -141,8 +170,8 @@ export default function Work() {
           onClick={() =>
             image?.path && router.push(`/${locale}/portfolio/${image?.path}`)
           }
-          className={`${styles.imageContainer} ${space_mono.className} image${
-            index + 1
+          className={`${styles.imageContainer} ${space_mono.className} ${
+            styles[`image${index + 1}`]
           }`}
           tabIndex={0}
           role="button"
