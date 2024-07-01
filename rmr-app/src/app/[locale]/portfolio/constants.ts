@@ -40,7 +40,7 @@ export const images = [
   },
   {
     id: 3,
-    src: "/aeugly.png",
+    src: "/aeugly.jpg",
     width: 393,
     height: 283,
     title: "ugly",
@@ -82,7 +82,6 @@ export const images = [
     src: "/tarot-group.jpeg",
     width: 388,
     height: 398,
-    path: "/tarot",
     title: "tarot",
     alt: "tarot-project",
     en: {
@@ -97,7 +96,7 @@ export const images = [
   },
   {
     id: 6,
-    src: "/inicio1.png",
+    src: "/inicio.gif",
     width: 220,
     height: 477,
     alt: "main-mensis",

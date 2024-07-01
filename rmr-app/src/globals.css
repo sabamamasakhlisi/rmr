@@ -34,16 +34,16 @@ body {
 }
 
 .p-h {
-  padding: 2rem 3.5rem 0 3.5rem;
-}
-
-.font-64 {
-  font-size: 3.425rem;
+  padding: 2rem 3.5rem 2rem 3.5rem;
 }
 
 .font-64px {
-  font-size: 3.425rem;
+  font-size: 3.225rem;
   font-weight: 300;
+}
+
+.main-page-header {
+  justify-content: flex-end;
 }
 
 .font-34px {
@@ -192,6 +192,11 @@ body {
   width: 100%;
 }
 
+.slider-image {
+  max-height: 600px;
+  width: 100%;
+}
+
 .txt-pn {
   color: #ffb0be;
 }
@@ -214,17 +219,17 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 1386px) {
+@media (max-width: 1391px) {
   .rs-wrap {
     gap: 1rem;
   }
-  .font-64 {
+  .font-64px {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 1146px) {
-  .font-64 {
+  .font-64px {
     font-size: 2rem;
   }
   .rs-col {
@@ -249,10 +254,6 @@ body {
 @media (max-width: 490px) {
   .gap-8 {
     gap: 1rem;
-  }
-
-  .font-64 {
-    font-size: 1.625rem;
   }
 
   .p-h {

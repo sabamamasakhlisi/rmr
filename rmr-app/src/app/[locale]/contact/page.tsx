@@ -187,7 +187,7 @@ export default function Contact() {
           gmail.com
         </a>
       </div>
-      <div className="social flex justify-center items-center font-64">
+      <div className="social flex justify-center items-center font-64px">
         <a
           className={`txt-yl link-to ${space_mono.className}`}
           href="https://www.behance.net/rosevalle"
@@ -213,7 +213,7 @@ export default function Contact() {
           LINKEDIN
         </a>
       </div>
-      <div ref={linksRef} className="font-64 txt-yl">
+      <div ref={linksRef} className="font-64px txt-yl">
         <a
           className={`link-to ${space_mono.className}`}
           href="https://www.instagram.com/rosamtrbls/"

@@ -98,6 +98,39 @@
   opacity: 0.1;
 }
 
+@media (min-width: 2150px) {
+  .image2 {
+    left: 792px;
+  }
+
+  .image5 {
+    top: 216px;
+    left: 1632px;
+  }
+
+  .image6 {
+    left: 410px;
+  }
+
+  .image7 {
+    left: 1280px;
+    top: 882px;
+  }
+
+  .image4 {
+    left: 694px;
+    top: 707px;
+  }
+  .image1,
+  .image3 {
+    left: 100px;
+  }
+  .image8 {
+    left: 1000px;
+    top: 1500px;
+  }
+}
+
 @media (max-width: 1845px) {
   .image2 {
     left: 792px;

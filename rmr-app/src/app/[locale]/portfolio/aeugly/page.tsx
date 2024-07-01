@@ -16,13 +16,13 @@ export default function Aeugly() {
       metadata={metadata}
       mainContent={
         <Image
-          src="/aeugly.png"
+          src="/aestheticsoftheugly.gif"
           width={860}
           priority={true}
           className="main-image"
           height={600}
           quality={100}
-          alt="CUARENTA Y TRES PERSONAS, EN VERANO, EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO."
+          alt="Fanzine-shaped essay on the aesthetics of the ugly. Focusing on a modern effort for defining what they consist of, how they change, who creates them, and what they look like."
         />
       }
       description={"< Case study: AESTHETICS OF THE UGLY. >"}

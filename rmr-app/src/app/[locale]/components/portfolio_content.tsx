@@ -37,7 +37,7 @@ export default function PortfolioContent({
       {mainContent}
       <h4 className="txt-yl fw-7">{description || ""}</h4>
       <p>{sectionContet}</p>
-      <footer>{footerContent}</footer>
+      <footer className="my-4">{footerContent}</footer>
     </section>
   );
 }

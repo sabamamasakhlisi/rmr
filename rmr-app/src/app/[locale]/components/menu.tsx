@@ -14,7 +14,7 @@ export default function Menu({ list }: { list: MenuItem[] }) {
       <nav aria-labelledby="main-menu" className="w-full">
         <ul
           role="menubar"
-          className="flex flex-row items-center gap-32 text-xl font-64px w-full rs-wrap"
+          className="flex flex-row items-center gap-24 text-xl font-64px w-full rs-wrap"
         >
           {list.map((item) => (
             <li

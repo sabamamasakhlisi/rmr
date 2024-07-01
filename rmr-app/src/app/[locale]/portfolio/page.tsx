@@ -88,7 +88,7 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
       return (
         <>
           <div>
-            <h3 className="txt-yl fs-24">
+            <h3 className="txt-yl text-xl">
               <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
               <span>{hoveredImage[locale]?.light ?? ""}</span>
             </h3>

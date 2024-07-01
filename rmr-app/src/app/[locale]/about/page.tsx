@@ -27,11 +27,12 @@ export default function About() {
     >
       <div className={styles.me}>
         <Image
-          src="/rosa.png"
+          src="/Rosa.gif"
           alt="Rosa Picture"
-          width={336}
-          height={448}
+          width={338}
+          height={423}
           quality={100}
+          priority={true}
         />
         <div className={styles.about}>
           <p className="txt-pn">

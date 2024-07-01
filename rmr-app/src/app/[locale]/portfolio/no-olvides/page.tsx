@@ -16,7 +16,7 @@ export default function NoOlvides() {
       metadata={metadata}
       mainContent={
         <Image
-          src="/no-olvides-s.jpg"
+          src="/no-olvides-in.jpg"
           width={860}
           priority={true}
           className="main-image"

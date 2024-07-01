@@ -27,21 +27,17 @@ export default function LanguageSwitch() {
   };
 
   return (
-    pathName.length > HOME_URL_LENGTH && (
-      <ul role="language-switch" className="text-xl font-34px">
-        {Object.values(Locales).map((item, index) => (
-          <li
-            className={
-              locale === item ? styles.currentLang : styles.languageText
-            }
-            key={index}
-            role="menuitem"
-            onClick={switchHandler}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-    )
+    <ul role="language-switch" className="text-xl font-34px">
+      {Object.values(Locales).map((item, index) => (
+        <li
+          className={locale === item ? styles.languageText : styles.currentLang}
+          key={index}
+          role="menuitem"
+          onClick={switchHandler}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
   );
 }
