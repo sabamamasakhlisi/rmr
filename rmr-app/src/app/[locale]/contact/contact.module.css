@@ -61,6 +61,14 @@
     margin: 0 2rem;
     opacity: 0;
   }
+  .littleContact {
+    display: none;
+    opacity: 0;
+  }
+  .littleStar {
+    display: none;
+    opacity: 0;
+  }
   .contactMail {
     font-size: 1.5rem;
     margin-bottom: 1rem;

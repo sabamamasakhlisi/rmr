@@ -195,6 +195,7 @@ body {
 .slider-image {
   max-height: 600px;
   width: 100%;
+  min-height: 300px;
 }
 
 .txt-pn {
@@ -243,9 +244,7 @@ body {
   .p-h {
     padding: 0 1.725rem 2rem 1.725rem;
   }
-  .font-64px {
-    font-size: 3rem;
-  }
+
   .fs-24 {
     font-size: 1rem;
   }
@@ -265,7 +264,7 @@ body {
   }
 
   .font-64px {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .social {
     flex-direction: column-reverse;

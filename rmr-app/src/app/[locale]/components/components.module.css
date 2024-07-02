@@ -19,6 +19,9 @@
   .mainSubtitle {
     padding: 0 1.725rem 2rem 1.725rem;
   }
+  .portfolioSection {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 325px) {
