@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+.plus {
+  display: none;
+}
+
 .imageContainer {
   position: absolute;
 }
@@ -329,6 +333,13 @@
 }
 
 @media (max-width: 768px) {
+  .hoverContainer {
+    display: none;
+  }
+  .plus {
+    display: inline;
+    position: absolute;
+  }
   .image1 {
     top: 200px;
   }

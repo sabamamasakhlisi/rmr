@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import styles from "./work.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import { images } from "./constants";

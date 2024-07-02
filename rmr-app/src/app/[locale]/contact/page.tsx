@@ -119,43 +119,6 @@ export default function Contact() {
   const linksRefTwo = useRef(null);
   const linksRefOne = useRef(null);
 
-  // useEffect(() => {
-  //   const timeline = gsap.timeline({
-  //     defaults: { duration: 0.8, ease: "bounce.out" }, // Adjusted duration and ease for a more pronounced jump
-  //   });
-
-  //   // Stagger the animation for each element, creating a cascading effect
-  //   timeline.fromTo(
-  //     [heartRef.current, headerRef.current, linksRef.current, titleRef.current],
-  //     { y: 100, opacity: 0 },
-  //     { y: 0, opacity: 1 }
-  //   );
-  //   gsap.fromTo(
-  //     littleStar.current,
-  //     { opacity: 0, scale: 0, x: 0, y: 0, x: -600, y: 100 },
-  //     {
-  //       opacity: 1,
-  //       scale: 1.5,
-  //       x: -600,
-  //       y: 100,
-  //       duration: 1.5,
-  //       ease: "elastic.out(2, 0.5)",
-  //     }
-  //   );
-  //   gsap.fromTo(
-  //     littleContact.current,
-  //     { opacity: 0, scale: 0, x: 600, y: 100 },
-  //     {
-  //       opacity: 1,
-  //       scale: 1.5,
-  //       x: 600,
-  //       y: 100,
-  //       duration: 1.5,
-  //       ease: "elastic.out(2, 0.5)",
-  //     }
-  //   );
-  // }, []);
-
   return (
     <section className={styles.contactSection}>
       <Image
