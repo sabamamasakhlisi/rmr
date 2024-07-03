@@ -33,7 +33,13 @@ export default function Aeugly() {
             : ""}
         </>
       }
-      footerContent={<p>Only one copy available, printed on glossy paper.</p>}
+      footerContent={
+        <p>
+          {locale === "en"
+            ? `Only one copy available, printed on glossy paper.`
+            : "Tan solo un ejemplar disponible, impreso en papel brillante."}
+        </p>
+      }
     />
   );
 }
