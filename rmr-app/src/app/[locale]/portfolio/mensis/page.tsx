@@ -71,7 +71,7 @@ export default function Mensis() {
           <p className="mt-4">
             {locale === "en" ? (
               <>
-                Want to navigate the prototype on Figma?{" "}
+                Want to navigate the prototype on Figma?
                 <a
                   className="link-to txt-pr"
                   href={
@@ -79,12 +79,12 @@ export default function Mensis() {
                   }
                   target="_blank"
                 >
-                  Let's go!
+                  {`Let's go!`}
                 </a>
               </>
             ) : (
               <>
-                ¿Quieres probar el prototipo en Figma?{" "}
+                ¿Quieres probar el prototipo en Figma?
                 <a
                   href={
                     "https://www.figma.com/proto/sXvXrLsVvOEZBRZef0moEJ/MENSIS?node-id=537-1&t=afUrAe53OZx4LBcC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=537%3A1"
