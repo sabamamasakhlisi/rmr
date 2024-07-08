@@ -144,7 +144,7 @@ export default function Contact() {
         className={`${styles.contactMail} ${space_mono.className}`}
         ref={headerRef}
       >
-        <a href="mailto:rosamtrbls[@]gmail.com">
+        <a>
           rosamtrbls<span className={styles.brac}>{"["}</span>@
           <span className={styles.brac}>{"]"}</span>
           gmail.com
