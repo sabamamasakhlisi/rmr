@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .txtTouch {
@@ -16,15 +16,47 @@
 
 .heart {
   margin: 0 4rem;
+  opacity: 0;
 }
 
 .contactMail {
   font-size: 4rem;
 }
 
+.littleStar {
+  position: absolute;
+  opacity: 0; /* Hide elements initially */
+}
+
+.littleContact {
+  position: absolute;
+  opacity: 0; /* Hide elements initially */
+}
+
+@keyframes leftRight {
+  0%,
+  100% {
+    transform: translate3d(-10px, 0, 0); /* Move left */
+  }
+  50% {
+    transform: translate3d(10px, 0, 0); /* Move right */
+  }
+}
+
 @media (max-width: 1386px) {
   .txtTouch {
     font-size: 5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .littleContact {
+    display: none;
+    opacity: 0;
+  }
+  .littleStar {
+    display: none;
+    opacity: 0;
   }
 }
 
@@ -38,6 +70,15 @@
 @media (max-width: 768px) {
   .heart {
     margin: 0 2rem;
+    opacity: 0;
+  }
+  .littleContact {
+    display: none;
+    opacity: 0;
+  }
+  .littleStar {
+    display: none;
+    opacity: 0;
   }
   .contactMail {
     font-size: 1.5rem;
@@ -47,5 +88,6 @@
 @media (max-width: 490px) {
   .heart {
     margin: 0 1rem;
+    opacity: 0;
   }
 }

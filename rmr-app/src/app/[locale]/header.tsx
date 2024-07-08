@@ -18,7 +18,7 @@ export default function Header() {
       <Link className={styles.title} href="/">
         <span className={styles.titleRosa}>rosa</span>mtrbls
       </Link>
-      <div className="flex flex-row items-center justify-center gap-8 w-full">
+      <div className="flex flex-row items-center justify-end gap-8 w-full">
         <Menu list={TranslatedList} />
         <LanguageSwitch />
       </div>

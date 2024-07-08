@@ -1,11 +1,40 @@
-.currentLang {
-  font-weight: 600;
-  color: var(--text-offwhite);
-  cursor: pointer;
+.mainSubtitle {
+  font-size: 2.5rem;
+  padding: 0 3.5rem 4rem 3.5rem;
 }
 
-.languageText {
-  font-weight: 400;
+.portfolioSection {
+  max-width: 70%;
+}
+
+.portfolioSection h4 {
+  margin: 30px 0;
+}
+
+.currentLang {
   color: var(--light-text-offwhite);
-  cursor: pointer;
+}
+
+.switch {
+  position: absolute;
+  top: 46px;
+}
+
+@media (max-width: 768px) {
+  .mainSubtitle {
+    padding: 0 1.725rem 2rem 1.725rem;
+  }
+  .portfolioSection {
+    max-width: 100%;
+  }
+  .switch {
+    position: absolute;
+    top: 20px;
+  }
+}
+
+@media (max-width: 325px) {
+  .mainSubtitle {
+    font-size: 2rem;
+  }
 }

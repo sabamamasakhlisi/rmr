@@ -8,11 +8,11 @@ import CommingSoon from "./coming-soon";
 
 const inter = Inter({ subsets: ["latin"] });
 
-//generatemetadata according to locale spanish or english
+// generatemetadata according to locale spanish or english
 export const metadata: Metadata = {
-  title: "rosa mota robles",
+  title: "Rosa Mota Robles",
   description:
-    "Rosa Mota, Graphic Designer (MA Cultural Intelligence). Madrid-born, fluent in French & English. Experienced at cultural institutions (Pompidou, Bétonsalon). Passionate about design, art & exploring new creative fields ",
+    "Rosa Mota Robles, Graphic Designer (MA Cultural Intelligence). Madrid-born, fluent in French & English. Experienced at cultural institutions (Pompidou, Bétonsalon). Passionate about design, art & exploring new creative fields ",
   verification: {
     google: "4qVG4eC2XyE24J56Grt_XS7sVqOL-_FI_gowb1gle90",
   },
