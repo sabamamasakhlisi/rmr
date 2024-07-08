@@ -228,6 +228,16 @@ body {
     font-size: 3rem;
   }
 }
+@media (max-width: 1200px) {
+  .font-64px {
+    font-size: 2.725rem;
+  }
+  .rs-col {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+}
 
 @media (max-width: 1146px) {
   .font-64px {

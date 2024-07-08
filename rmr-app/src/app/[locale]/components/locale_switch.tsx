@@ -27,7 +27,12 @@ export default function LanguageSwitch() {
   };
 
   return (
-    <ul role="language-switch" className="text-xl font-34px">
+    <ul
+      role="language-switch"
+      className={`text-xl font-34px ${
+        pathName.length > HOME_URL_LENGTH ? "" : styles.switch
+      }`}
+    >
       {Object.values(Locales).map((item, index) => (
         <li
           className={locale === item ? styles.languageText : styles.currentLang}

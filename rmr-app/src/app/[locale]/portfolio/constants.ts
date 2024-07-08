@@ -14,7 +14,7 @@ export const images = [
     },
     es: {
       description: "< 5 HISTORIES>",
-      dark: "concepción y diseño gráfico y editorial",
+      dark: "concepción, diseño gráfico y editorial",
     },
   },
   {
@@ -53,7 +53,7 @@ export const images = [
     },
     es: {
       description: "< Case study: AESTHETICS OF THE UGLY. >",
-      dark: "concepción y diseño gráfico y editorial",
+      dark: "concepción, diseño gráfico y editorial",
     },
     year: 2022,
   },
@@ -111,7 +111,7 @@ export const images = [
     },
     es: {
       description: "< MENSIS >",
-      light: "para una guía y enciclopedia digital sobre la menstruación ",
+      light: " para una guía y enciclopedia digital sobre la menstruación ",
       dark: "diseño de identidad y aplicación",
     },
   },

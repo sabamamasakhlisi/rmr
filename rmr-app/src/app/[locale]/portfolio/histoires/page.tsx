@@ -25,7 +25,7 @@ export default function Histoires() {
           alt="This short stories fanzine gathers writings from my first 5 months in Paris. Only 1 copy available and only in French."
         />
       }
-      description={"< Case study: AESTHETICS OF THE UGLY. >"}
+      description={"< 5 HISTORIES >"}
       sectionContet={
         <>
           {locale === "en"

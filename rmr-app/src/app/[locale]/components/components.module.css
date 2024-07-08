@@ -15,12 +15,21 @@
   color: var(--light-text-offwhite);
 }
 
+.switch {
+  position: absolute;
+  top: 46px;
+}
+
 @media (max-width: 768px) {
   .mainSubtitle {
     padding: 0 1.725rem 2rem 1.725rem;
   }
   .portfolioSection {
     max-width: 100%;
+  }
+  .switch {
+    position: absolute;
+    top: 20px;
   }
 }
 

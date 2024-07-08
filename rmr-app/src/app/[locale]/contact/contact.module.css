@@ -49,6 +49,17 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .littleContact {
+    display: none;
+    opacity: 0;
+  }
+  .littleStar {
+    display: none;
+    opacity: 0;
+  }
+}
+
 @media (max-width: 1146px) {
   .txtTouch {
     font-size: 3.5rem;
