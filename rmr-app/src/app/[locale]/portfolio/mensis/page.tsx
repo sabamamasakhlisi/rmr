@@ -79,7 +79,7 @@ export default function Mensis() {
                   }
                   target="_blank"
                 >
-                  {`Let's go!`}
+                  {` Let's go!`}
                 </a>
               </>
             ) : (
@@ -92,6 +92,7 @@ export default function Mensis() {
                   target="_blank"
                   className="link-to txt-pr"
                 >
+                  {" "}
                   ¡Allá vamos!
                 </a>
               </>
