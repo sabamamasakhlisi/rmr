@@ -255,10 +255,8 @@ body {
   color: var(--light-yellow);
 }
 
-@media (max-width: 1386px) {
-  .sec-lay {
-    margin: 0 auto;
-  }
+.sec-lay {
+  margin: 0 auto;
 }
 
 @media (max-width: 1391px) {
