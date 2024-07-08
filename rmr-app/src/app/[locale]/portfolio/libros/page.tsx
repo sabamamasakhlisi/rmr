@@ -4,7 +4,7 @@ import { useLocale } from "next-intl";
 import PortfolioContent from "../../components/portfolio_content";
 
 export const metadata: Metadata = {
-  title: "rosa mota robles",
+  title: "Rosa Mota Robles",
   description:
     "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
 };
