@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "../../globals.css";
 import Header from "./header";
 import { useLocale } from "next-intl";
-import Image from "next/image";
-import CommingSoon from "./coming-soon";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
