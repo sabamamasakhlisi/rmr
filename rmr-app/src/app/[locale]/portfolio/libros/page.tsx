@@ -43,7 +43,9 @@ export default function Libros() {
           target="_blank"
           className="link-to txt-pr"
         >
-          Check out Jara’s work!
+          {locale === "en"
+            ? `Check out Jara’s work!`
+            : "¡Échale un ojo al trabajo de Jara!"}
         </a>
       }
     />

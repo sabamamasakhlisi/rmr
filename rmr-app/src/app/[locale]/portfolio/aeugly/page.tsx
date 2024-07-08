@@ -30,7 +30,7 @@ export default function Aeugly() {
         <>
           {locale === "en"
             ? `Fanzine-shaped essay on the aesthetics of the ugly. Focusing on a modern effort for defining what they consist of, how they change, who creates them, and what they look like.`
-            : ""}
+            : "Ensayo en forma de fanzine sobre la Estética de lo feo. Centrado en un intento moderno por definir en qué consiste, cómo cambia, quién la crea y qué aspecto tiene."}
         </>
       }
       footerContent={

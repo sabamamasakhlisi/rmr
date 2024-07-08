@@ -11,7 +11,7 @@ import { Locales } from "@/_lib/types";
 const space_mono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 export default function Contact() {

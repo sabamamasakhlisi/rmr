@@ -10,7 +10,7 @@ export const images = [
     year: 2024,
     en: {
       description: "< 5 HISTORIES>",
-      dark: "book conception and design",
+      dark: "book conception, editorial and graphic design",
     },
     es: {
       description: "< 5 HISTORIES>",
@@ -34,8 +34,7 @@ export const images = [
     },
     es: {
       description: "< LA DERROTA >",
-      light: "guión y ",
-      dark: "producción, dirección artística, vestuario y diseño gráfico",
+      dark: "guión y producción, dirección artística, vestuario y diseño gráfico",
     },
   },
   {
@@ -49,7 +48,7 @@ export const images = [
     description: "< Case study: AESTHETICS OF THE UGLY. >",
     en: {
       description: "< Case study: AESTHETICS OF THE UGLY. >",
-      dark: "book conception and design",
+      dark: "book conception, editorial and graphic design",
     },
     es: {
       description: "< Case study: AESTHETICS OF THE UGLY. >",
@@ -67,14 +66,12 @@ export const images = [
     description: "< MAIN 3D >",
     year: 2020,
     en: {
-      light: "experimental",
-      dark: " 3D design and animations ",
-      addon: "on c4d",
+      dark: "experimental 3D design and animations ",
+      addon: "con c4d",
     },
     es: {
-      light: "",
       dark: "diseño experimental y animaciones 3D ",
-      addon: "on c4d",
+      addon: "con c4d",
     },
   },
   {
@@ -86,11 +83,11 @@ export const images = [
     alt: "tarot-project",
     en: {
       light: " for a Tarot cards deck",
-      dark: "Illustrations",
+      dark: "illustrations",
     },
     es: {
       light: " para una baraja de cartas de Tarot",
-      dark: "Illustrations",
+      dark: "ilustraciones",
     },
     year: 2024,
   },
@@ -146,13 +143,20 @@ export const images = [
     en: {
       description: "< NO OLVIDES >",
       light: "for a personal documentary project",
-      dark: "book design, photography and illustration",
+      dark: "book design, photography and illustration ",
     },
     es: {
       description: "< NO OLVIDES >",
       light: " para un proyecto documental personal",
       dark: "concepción del libro, fotografía e ilustración ",
     },
+  },
+  {
+    id: 9,
+    src: "/",
+    width: 100,
+    height: 32,
+    title: "olvides",
   },
 ];
 

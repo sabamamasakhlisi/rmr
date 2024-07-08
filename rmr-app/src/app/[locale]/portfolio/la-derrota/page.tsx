@@ -39,12 +39,14 @@ export default function Libros() {
           {locale === "en" ? (
             <p className="flex flex-col gap-4">
               <span>
-                LA DERROTA is a short film about the fear of disappearing, of
-                impersonation, and of oneself.
+                LA DERROTA is a short film about the fear <br /> of
+                disappearing,
+                <br /> of impersonation, <br />
+                and of oneself.
               </span>
               <span>
-                Written, directed and produced by me, costumes made by me,
-                makeup and art direction as well.
+                Written, directed and produced by me, as well as the art
+                direction, costumes and make up.
               </span>
               <span>
                 Starring Lucía Llanos Subijana and Marta Lara Martínez, with key
@@ -55,8 +57,8 @@ export default function Libros() {
           ) : (
             <p className="flex flex-col gap-4">
               <span>
-                LA DERROTA es un corto sobre el miedo a desaparecer, a la
-                suplantación de identidad, y a una misma.
+                LA DERROTA es un corto sobre el miedo <br />a desaparecer,{" "}
+                <br />a la suplantación de identidad, <br /> y a una misma.
               </span>
               <span>
                 Escrito, dirigido y producido por mí. Al igual que el diseño de

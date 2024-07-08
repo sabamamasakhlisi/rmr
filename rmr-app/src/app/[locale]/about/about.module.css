@@ -19,6 +19,10 @@
   max-height: 423px;
 }
 
+.about {
+  padding-bottom: 2rem;
+}
+
 .about p {
   word-wrap: break-word;
 }

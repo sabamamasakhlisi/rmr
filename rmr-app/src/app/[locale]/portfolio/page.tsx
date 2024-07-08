@@ -11,7 +11,7 @@ import { Space_Mono } from "next/font/google";
 const space_mono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 const renderContentById = (id: number, hoveredImage: any, locale: string) => {
@@ -60,8 +60,7 @@ const renderContentById = (id: number, hoveredImage: any, locale: string) => {
         <>
           <div>
             <h3 className="txt-yl fs-24">
-              <span className="fw-7">{hoveredImage[locale]?.light ?? ""}</span>
-              <span>{hoveredImage[locale]?.dark ?? ""}</span>
+              <span className="fw-7">{hoveredImage[locale]?.dark ?? ""}</span>
               <span>{hoveredImage[locale]?.addon ?? ""}</span>
             </h3>
             <p className="mu-1 fs-1">
@@ -182,16 +181,24 @@ export default function Work() {
             }
           }}
         >
-          <Image
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            alt={image.alt || "Image"}
-            quality={100}
-            priority={true}
-            className={`${isHovering === image.id ? styles.hoverOpacity : ""}`}
-          />
-          {isHovering === image.id && renderByHovered(image.id)}
+          {image.id === 9 ? (
+            <div className="empty-divider"></div>
+          ) : (
+            <>
+              <Image
+                src={image.src}
+                width={image.width}
+                height={image.height}
+                alt={image.alt || "Image"}
+                quality={100}
+                priority={true}
+                className={`${
+                  isHovering === image.id ? styles.hoverOpacity : ""
+                }`}
+              />
+              {isHovering === image.id && renderByHovered(image.id)}
+            </>
+          )}
         </div>
       ))}
     </section>

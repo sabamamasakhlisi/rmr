@@ -20,7 +20,7 @@ export default function Mensis() {
         >
           <div>
             <Image
-              src="/mensis2.jpg"
+              src="/mensisDos.jpg"
               width={860}
               priority={true}
               className="slider-image"
@@ -31,7 +31,7 @@ export default function Mensis() {
           </div>
           <div>
             <Image
-              src="/mensis3.jpg"
+              src="/mensisTres.jpg"
               width={860}
               priority={true}
               className="slider-image"
@@ -42,7 +42,7 @@ export default function Mensis() {
           </div>
           <div>
             <Image
-              src="/mensis1.jpg"
+              src="/mensisUno.jpg"
               width={860}
               priority={true}
               className="slider-image"
@@ -62,11 +62,42 @@ export default function Mensis() {
         </>
       }
       footerContent={
-        <p>
-          {locale === "en"
-            ? `Developed in Figma and with my own illustrations and animations, the design of this platform aims to facilitate access to a guide and encyclopedia on this subject.`
-            : `Desarrollada en Figma y con ilustraciones y animaciones propias, el diseño de esta plataforma pretende facilitar el acceso a una guía y enciclopedia sobre este sujeto.`}
-        </p>
+        <div>
+          <p>
+            {locale === "en"
+              ? `Developed in Figma and with my own illustrations and animations, the design of this platform aims to facilitate access to a guide and encyclopedia on this subject.`
+              : `Desarrollada en Figma y con ilustraciones y animaciones propias, el diseño de esta plataforma pretende facilitar el acceso a una guía y enciclopedia sobre este sujeto.`}
+          </p>
+          <p className="mt-4">
+            {locale === "en" ? (
+              <>
+                Want to navigate the prototype on Figma?{" "}
+                <a
+                  className="link-to txt-pr"
+                  href={
+                    "https://www.figma.com/proto/sXvXrLsVvOEZBRZef0moEJ/MENSIS?node-id=537-1&t=afUrAe53OZx4LBcC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=537%3A1"
+                  }
+                  target="_blank"
+                >
+                  Let's go!
+                </a>
+              </>
+            ) : (
+              <>
+                ¿Quieres probar el prototipo en Figma?{" "}
+                <a
+                  href={
+                    "https://www.figma.com/proto/sXvXrLsVvOEZBRZef0moEJ/MENSIS?node-id=537-1&t=afUrAe53OZx4LBcC-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=537%3A1"
+                  }
+                  target="_blank"
+                  className="link-to txt-pr"
+                >
+                  ¡Allá vamos!
+                </a>
+              </>
+            )}
+          </p>
+        </div>
       }
     />
   );

@@ -29,11 +29,17 @@ export default function NoOlvides() {
       sectionContet={
         <>
           {locale === "en"
-            ? `"No olvides" (do not forget) is a project that speaks about the memories and experiences of 6 grandmothers. Book design, photography and illustration by myself, their own words, and nothing more than a small tribute to all of them. `
+            ? `"No olvides" (Do Not Forget) is a project that speaks about the memories and experiences of 6 grandmothers. Book design, photography and illustration by myself, their own words, and nothing more than a small tribute to all of them. `
             : `"No olvides" es un proyecto que habla de los recuerdos y vivencias de 6 abuelas. Diseño del libro, fotografía e ilustración realizadas por mí, sus propias palabras, y nada más que un pequeño homenaje a todas ellas.`}
         </>
       }
-      footerContent={<p>{"Limited edition of 100 copies."}</p>}
+      footerContent={
+        <p>
+          {locale === "en"
+            ? "Limited edition of 100 copies."
+            : "Edición limitada de 100 copias."}
+        </p>
+      }
     />
   );
 }

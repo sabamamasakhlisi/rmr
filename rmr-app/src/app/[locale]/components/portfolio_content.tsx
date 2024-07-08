@@ -6,7 +6,7 @@ import { Space_Mono } from "next/font/google";
 const space_mono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 interface AbstractComponentProps {

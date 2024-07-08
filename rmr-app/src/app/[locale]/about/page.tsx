@@ -9,7 +9,7 @@ import { Locales } from "@/_lib/types";
 const space_mono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space",
-  weight: "400",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -48,8 +48,8 @@ export default function About() {
           </p>
           <p className="txt-yl">
             {locale === Locales.EN
-              ? "  I HAVE WORKED IN CULTURAL INSTITUTIONS SUCH AS Centre Pompidou AND Bétonsalon - center for art and research."
-              : "HE TRABAJADO EN INSTITUCIONES CULTURALES COMO EL Centre Pompidou Y Bétonsalon - centro de arte e investigación."}
+              ? "  I HAVE WORKED IN CULTURAL INSTITUTIONS SUCH AS Centre Pompidou AND Bétonsalon - center for art and research, AS WELL AS DOING FREELANCE WORK ON GRAPHIC DESIGN PROJECTS."
+              : "HE TRABAJADO EN INSTITUCIONES CULTURALES COMO EL Centre Pompidou Y Bétonsalon - centro de arte e investigación, A LA PAR QUE EN PROYECTOS DE DISEÑO GRÁFICO COMO FREELANCE."}
 
             <span>
               {locale === Locales.EN
