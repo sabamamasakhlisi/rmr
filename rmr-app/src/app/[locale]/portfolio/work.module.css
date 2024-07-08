@@ -279,6 +279,10 @@
   }
 
   .image2 {
+    left: 300px;
+  }
+
+  .image2 {
     top: 700px;
   }
   .image3 {
@@ -289,6 +293,7 @@
   }
   .image5 {
     top: 2200px;
+    left: 240px;
   }
   .image6 {
     top: 2700px;
