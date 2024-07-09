@@ -49,6 +49,10 @@
     padding: 0 1.725rem 2rem 1.725rem;
   }
 
+  .title {
+    font-size: 3.825rem;
+  }
+
   .soon {
     font-size: 1.625rem;
   }
@@ -61,6 +65,13 @@
     display: flex;
     justify-content: flex-end;
     padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .title {
+    font-size: 3.325rem;
+    margin-top: 0.325rem;
   }
 }
 

@@ -192,6 +192,7 @@ export default function Work() {
                 alt={image.alt || "Image"}
                 quality={100}
                 priority={true}
+                unoptimized={image.id === 6}
                 className={`${
                   isHovering === image.id ? styles.hoverOpacity : ""
                 }`}
