@@ -16,11 +16,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://www.rosamtrbls.com/",
-    title: "Rosa Mota Robles",
+    url: "https://www.rosamtrbls.com/en",
+    title:
+      "Rosa Mota Robles - graphic design /  communication /  illustration / cultural mediation / and much more!",
     description:
       "graphic design /  communication /  illustration / cultural mediation / and much more!",
-    siteName: "rosamtrbls",
+    siteName: "rosamtrbls - Rosa Mota Robles",
     images: [
       {
         url: "https://www.rosamtrbls.com/_next/image?url=%2Fmain-libro.png&w=1200&q=100",
