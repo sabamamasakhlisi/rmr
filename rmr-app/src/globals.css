@@ -313,10 +313,16 @@ body {
   }
 
   .font-64px {
-    font-size: 1.2rem;
+    font-size: 1.425rem;
   }
   .social {
     flex-direction: column-reverse;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 321px) {
+  .font-64px {
+    font-size: 1.2rem;
   }
 }

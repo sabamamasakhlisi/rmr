@@ -50,7 +50,7 @@
   }
 
   .title {
-    font-size: 3.825rem;
+    font-size: 3.725rem;
   }
 
   .soon {
@@ -70,7 +70,7 @@
 
 @media (max-width: 376px) {
   .title {
-    font-size: 3.325rem;
+    font-size: 3.225rem;
     margin-top: 0.325rem;
   }
 }

@@ -32,7 +32,7 @@ export default function About() {
           width={338}
           height={423}
           quality={100}
-          priority={true}
+          priority
         />
         <div className={styles.about}>
           <p className="txt-pn">
