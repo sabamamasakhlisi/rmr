@@ -63,6 +63,7 @@ export const images = [
     height: 447,
     alt: "main-3d",
     title: "3d",
+    path: "dimensional",
     description: "< MAIN 3D >",
     year: 2020,
     en: {
@@ -76,11 +77,12 @@ export const images = [
   },
   {
     id: 5,
-    src: "/tarot-group.jpeg",
+    src: "/0_tarot_main.jpg",
     width: 388,
     height: 398,
     title: "tarot",
     alt: "tarot-project",
+    path: "tarot",
     en: {
       light: " for a Tarot cards deck",
       dark: "illustrations",
@@ -187,3 +189,21 @@ export type HoveredImage = {
     };
   };
 };
+
+export const tarotImages = [
+  { src: "/1_tarot_la.jpg", alt: "tarot - la luna" },
+  { src: "/2_tarot_la.jpg", alt: "tarot - la templanza" },
+  { src: "/3_tarot_les.jpg", alt: "tarot - les enamorades" },
+  { src: "/4_tarot_el.jpg", alt: "tarot - el sol" },
+  { src: "/5_tarot_el.jpg", alt: "tarot - el diablo" },
+  { src: "/6_tarot_el.jpg", alt: "tarot - el mundo" },
+  { src: "/7_tarot_la.jpg", alt: "tarot - la estrella" },
+  { src: "/8_tarot_la.jpg", alt: "tarot - la torre" },
+];
+
+export const lettersImages = [
+  { src: "/letterO.jpg", alt: "letter - O" },
+  { src: "/letterR.jpg", alt: "letter - R" },
+  { src: "/letterT.jpg", alt: "letter - t" },
+  { src: "/letterC.jpg", alt: "letter - c" },
+];

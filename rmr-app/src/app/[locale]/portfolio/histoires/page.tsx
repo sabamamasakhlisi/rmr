@@ -6,7 +6,20 @@ import { useLocale } from "next-intl";
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
   description:
-    "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
+    "graphic design /  communication /  illustration / cultural mediation / and much more!",
+  openGraph: {
+    type: "website",
+    url: "https://www.rosamtrbls.com/en",
+    title: "< 5 HISTORIES >",
+    description:
+      "This short stories fanzine gathers writings from my first 5 months in Paris. Only 1 copy available and only in French.",
+    siteName: "rosamtrbls - Rosa Mota Robles",
+    images: [
+      {
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Fmain-libro.png&w=1200&q=100",
+      },
+    ],
+  },
 };
 
 export default function Histoires() {

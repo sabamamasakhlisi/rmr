@@ -6,7 +6,21 @@ import PortfolioContent from "../../components/portfolio_content";
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
   description:
-    "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
+    "graphic design /  communication /  illustration / cultural mediation / and much more!",
+  openGraph: {
+    type: "website",
+    url: "https://www.rosamtrbls.com/en",
+    title:
+      "< CUARENTA Y TRES PERSONAS, EN VERANO, /n EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO. >",
+    description:
+      "Book design for @jaragarciaazor’s documental photography zine between the US and China.",
+    siteName: "rosamtrbls - Rosa Mota Robles",
+    images: [
+      {
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Fpersonidas.jpeg&w=1200&q=100",
+      },
+    ],
+  },
 };
 
 export default function Libros() {

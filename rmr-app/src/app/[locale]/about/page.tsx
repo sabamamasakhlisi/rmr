@@ -33,6 +33,7 @@ export default function About() {
           height={423}
           quality={100}
           priority
+          unoptimized
         />
         <div className={styles.about}>
           <p className="txt-pn">

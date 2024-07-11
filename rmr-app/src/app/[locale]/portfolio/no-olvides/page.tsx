@@ -6,7 +6,19 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
   description:
-    "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
+    "graphic design /  communication /  illustration / cultural mediation / and much more!",
+  openGraph: {
+    type: "website",
+    url: "https://www.rosamtrbls.com/en",
+    title: "< NO OLVIDES >",
+    description: `"No olvides" (Do Not Forget) is a project that speaks about the memories and experiences of 6 grandmothers. Book design, photography and illustration by myself, their own words, and nothing more than a small tribute to all of them. `,
+    siteName: "rosamtrbls - Rosa Mota Robles",
+    images: [
+      {
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Fmain-olvides.jpg&w=1200&q=100",
+      },
+    ],
+  },
 };
 
 export default function NoOlvides() {
@@ -22,7 +34,7 @@ export default function NoOlvides() {
           className="main-image"
           height={600}
           quality={100}
-          alt="CUARENTA Y TRES PERSONAS, EN VERANO, EN AGOSTO, EN FAMILIA, EN SOLEDAD, EN MI CÁMARA Y EN UN (1) SITIO."
+          alt={`"No olvides" (Do Not Forget) is a project that speaks about the memories and experiences of 6 grandmothers. Book design, photography and illustration by myself, their own words, and nothing more than a small tribute to all of them. `}
         />
       }
       description={"< NO OLVIDES >, 2020"}

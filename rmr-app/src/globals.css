@@ -111,6 +111,19 @@ body {
   background-color: var(--light-purple);
 }
 
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+  color: var(--light-yellow) !important;
+}
+
+.plus-svg {
+  width: 64px;
+  height: 64px !important;
+  position: absolute;
+  top: 32px;
+  right: 20px;
+}
+
 @keyframes fill-background {
   0% {
     background-position: left bottom; /* Starts at the bottom right */

@@ -6,7 +6,20 @@ import { useLocale } from "next-intl";
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
   description:
-    "MY NAME IS ROSA.I’M A GRAPHIC DESIGNER WITH A MASTERS IN CULTURAL INTELLIGENCE AND INNOVATIONS",
+    "graphic design /  communication /  illustration / cultural mediation / and much more!",
+  openGraph: {
+    type: "website",
+    url: "https://www.rosamtrbls.com/en",
+    title: "< Case study: AESTHETICS OF THE UGLY. >",
+    description:
+      "Fanzine-shaped essay on the aesthetics of the ugly. Focusing on a modern effort for defining what they consist of, how they change, who creates them, and what they look like.",
+    siteName: "rosamtrbls - Rosa Mota Robles",
+    images: [
+      {
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Faeugly.jpg&w=828&q=100",
+      },
+    ],
+  },
 };
 
 export default function Aeugly() {
