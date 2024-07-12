@@ -67,11 +67,11 @@ export const images = [
     description: "< MAIN 3D >",
     year: 2020,
     en: {
-      dark: "experimental 3D design and animations ",
+      dark: "experimental 3D design ",
       addon: "con c4d",
     },
     es: {
-      dark: "diseño experimental y animaciones 3D ",
+      dark: "diseño experimental 3D ",
       addon: "con c4d",
     },
   },
@@ -95,7 +95,7 @@ export const images = [
   },
   {
     id: 6,
-    src: "/inicio.gif",
+    src: "/mensis.gif",
     width: 220,
     height: 477,
     alt: "main-mensis",

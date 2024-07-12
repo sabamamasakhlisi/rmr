@@ -34,16 +34,11 @@ export default function Dimensional() {
           ))}
         </AliceCarousel>
       }
-      description={
-        locale === "en"
-          ? `Selection of experimental typography creations on C4D`
-          : `Selección de creaciones tipográficas experimentales en C4D`
-      }
       sectionContet={
         <>
           {locale === "en"
-            ? `Animation of the classic game Jenga, made in C4D.`
-            : `Animación del clásigo juego Jenga, realizada en C4D.`}
+            ? `Selection of experimental typography creations on C4D`
+            : `Selección de creaciones tipográficas experimentales en C4D`}
         </>
       }
     />
