@@ -44,14 +44,13 @@ export default function Contact() {
 
     gsap.fromTo(
       heartRef.current,
-      { y: 0, opacity: 0 },
+      { opacity: 0, scale: 0, x: 575, y: 100 },
       {
         opacity: 1,
         scale: 1.5,
-        x: 0,
-        y: 0,
+        x: 575,
+        y: 100,
         duration: 1.5,
-        delay: 1,
         ease: "elastic.out(3, 1)",
       }
     );
@@ -69,19 +68,6 @@ export default function Contact() {
       }
     );
 
-    gsap.fromTo(
-      littleContact.current,
-      { opacity: 0, scale: 0, x: 600, y: 100 },
-      {
-        opacity: 1,
-        scale: 1.5,
-        x: 600,
-        y: 100,
-        duration: 1.5,
-        ease: "elastic.out(2, 0.5)",
-      }
-    );
-
     gsap.to(littleStar.current, {
       y: 75,
       duration: 1.5,
@@ -91,17 +77,9 @@ export default function Contact() {
       delay: 1.5,
     });
 
-    gsap.to(littleContact.current, {
-      x: 575,
-      duration: 1.5,
-      ease: "power1.inOut",
-      yoyo: true,
-      repeat: -1,
-      delay: 1.5,
-    });
-
     gsap.to(heartRef.current, {
-      y: -5,
+      y: 95,
+      x: 575,
       duration: 1.5,
       ease: "power1.inOut",
       yoyo: true,
@@ -115,7 +93,6 @@ export default function Contact() {
   const titleRef = useRef(null);
   const headerRef = useRef(null);
   const littleStar = useRef(null);
-  const littleContact = useRef(null);
   const linksRefTwo = useRef(null);
   const linksRefOne = useRef(null);
 
@@ -133,16 +110,15 @@ export default function Contact() {
         {locale === Locales.EN ? "let's get in touch!" : "¿hablamos?"}
       </div>
       <Image
-        ref={littleContact}
+        ref={heartRef}
         className={styles.littleContact}
-        src="/message.ico"
-        alt="little-contact"
+        src="/heart.ico"
+        alt="heart"
         width={55}
         height={55}
       />
       <div
-        className={`${styles.contactMail} ${space_mono.className}`}
-        ref={headerRef}
+        className={`${styles.contactMail} ${space_mono.className} txt-pr bg-drk-purple`}
       >
         <a>
           rosamtrbls<span className={styles.brac}>{"["}</span>@
@@ -150,41 +126,33 @@ export default function Contact() {
           gmail.com
         </a>
       </div>
-      <div className="social flex justify-center items-center font-64px">
+
+      <section
+        className={`${styles.mainSection} ${space_mono.className} main-section flex-1 flex`}
+        aria-label="Main Content"
+      >
         <a
-          className={`txt-yl link-to ${space_mono.className}`}
+          className="bg-bw txt-dark-bw "
           href="https://www.behance.net/rosevalle"
           target="_blank"
-          ref={linksRefOne}
         >
-          BEHANCE
+          <div aria-label={"BEHANCE"}>{"BEHANCE"}</div>
         </a>
-        <Image
-          ref={heartRef}
-          className={styles.heart}
-          src="/heart.ico"
-          alt="heart"
-          width={55}
-          height={55}
-        />
         <a
-          className={`txt-yl link-to ${space_mono.className}`}
+          className="bg-drk-gr txt-gr"
           href="https://www.linkedin.com/in/rosa-mota-robles/"
           target="_blank"
-          ref={linksRefTwo}
         >
-          LINKEDIN
+          <div aria-label={"LINKEDIN"}>{"LINKEDIN"}</div>
         </a>
-      </div>
-      <div ref={linksRef} className="font-64px txt-yl">
         <a
-          className={`link-to ${space_mono.className}`}
+          className="bg-drk-pr txt-pn "
           href="https://www.instagram.com/rosamtrbls/"
           target="_blank"
         >
-          INSTAGRAM
+          <div aria-label={"INSTAGRAM"}>{"INSTAGRAM"}</div>
         </a>
-      </div>
+      </section>
     </section>
   );
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
+  height: 100dvh;
 }
 
 .txtTouch {
@@ -11,7 +11,7 @@
 }
 
 .brac {
-  color: var(--light-yellow);
+  color: #00000061;
 }
 
 .heart {
@@ -21,6 +21,26 @@
 
 .contactMail {
   font-size: 4rem;
+  width: 100%;
+  text-decoration: underline;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 10rem;
+}
+
+.contactMail:hover {
+  background-color: #a3b4ff !important;
+  color: var(--dark-purple) !important;
+}
+
+.innerSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .littleStar {
@@ -31,6 +51,45 @@
 .littleContact {
   position: absolute;
   opacity: 0; /* Hide elements initially */
+}
+
+.mainSection {
+  width: 100%;
+  flex-direction: row;
+}
+
+.mainSection a {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+@keyframes fill-background {
+  0% {
+    background-position: left bottom; /* Starts at the bottom right */
+  }
+  100% {
+    background-position: right top; /* Fills bottom to top at the end */
+  }
+}
+
+.mainSection a:nth-child(1):hover {
+  background: var(--light-orange);
+  color: var(--dark-red);
+}
+.mainSection a:nth-child(2):hover {
+  background: var(--light-green);
+  color: var(--dark-green);
+}
+.mainSection a:nth-child(3):hover {
+  background: var(--light-pink);
+  color: var(--dark-red);
 }
 
 @keyframes leftRight {
@@ -81,8 +140,18 @@
     opacity: 0;
   }
   .contactMail {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    min-height: 6rem;
+  }
+
+  .mainSection {
+    flex-direction: column;
+  }
+  .mainSection a {
+    font-size: 2rem;
+    min-height: auto;
+    display: flex;
+    padding-bottom: 2rem;
   }
 }
 @media (max-width: 490px) {
