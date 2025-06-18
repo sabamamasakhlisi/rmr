@@ -4,6 +4,7 @@ import "../../globals.css";
 import Header from "./header";
 import { useLocale } from "next-intl";
 import { Analytics } from "@vercel/analytics/react";
+import CommingSoon from "./coming-soon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,10 +40,10 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header />
-        {children}
+        {/* <Header />
+        {children} */}
         <Analytics />
-        {/* <CommingSoon /> */}
+        <CommingSoon />
       </body>
     </html>
   );
