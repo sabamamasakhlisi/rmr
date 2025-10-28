@@ -16,6 +16,8 @@ export const images = [
       description: "< 5 HISTORIES>",
       dark: "concepción, diseño gráfico y editorial",
     },
+    gridColumn: "3",
+    gridRow: "1",
   },
   {
     id: 2,
@@ -36,6 +38,8 @@ export const images = [
       description: "< LA DERROTA >",
       dark: "guión y producción, dirección artística, vestuario y diseño gráfico",
     },
+    gridColumn: "4",
+    gridRow: "1",
   },
   {
     id: 3,
@@ -55,6 +59,8 @@ export const images = [
       dark: "concepción, diseño gráfico y editorial",
     },
     year: 2022,
+    gridColumn: "2",
+    gridRow: "2",
   },
   {
     id: 4,
@@ -74,6 +80,8 @@ export const images = [
       dark: "diseño experimental 3D ",
       addon: "con c4d",
     },
+    gridColumn: "3 / 5",
+    gridRow: "2 / 3",
   },
   {
     id: 5,
@@ -92,6 +100,8 @@ export const images = [
       dark: "ilustraciones",
     },
     year: 2024,
+    gridColumn: "3 / 5",
+    gridRow: "2 / 3",
   },
   {
     id: 6,
@@ -152,13 +162,6 @@ export const images = [
       light: " para un proyecto documental personal",
       dark: "concepción del libro, fotografía e ilustración ",
     },
-  },
-  {
-    id: 9,
-    src: "/",
-    width: 100,
-    height: 32,
-    title: "olvides",
   },
 ];
 

@@ -1,12 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../../globals.css";
-import Header from "./header";
-import { useLocale } from "next-intl";
+import localFont from "next/font/local";
+import "../globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import CommingSoon from "./coming-soon";
+import Header from "./header";
 
-const inter = Inter({ subsets: ["latin"] });
+const PPMori = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PPMori-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PPMori-RegularItalic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/PPMori-SemiBold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
@@ -36,14 +52,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = useLocale();
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        {/* <Header />
-        {children} */}
+    <html>
+      <body className={PPMori.className}>
+        <Header />
+        {children}
         <Analytics />
-        <CommingSoon />
       </body>
     </html>
   );
