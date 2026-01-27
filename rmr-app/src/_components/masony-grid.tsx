@@ -70,7 +70,9 @@ function GridItemWithParallax({
                   id={item.id.toString()}
                   unoptimized={isGif}
                   priority={
-                    !!(item?.position?.rowStart && item.position.rowStart < 3)
+                    !!(
+                      item?.position?.rowStart && item.position.rowStart < 3
+                    ) || isGif
                   }
                 />
                 <Image
