@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "rosamtrbls - Rosa Mota Robles",
     images: [
       {
-        url: "https://www.rosamtrbls.com/_next/image?url=%2Fmain-libro.png&w=1200&q=100",
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Fno-olvides-libro.jpg&w=384&q=75",
       },
     ],
   },
