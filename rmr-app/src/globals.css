@@ -160,6 +160,10 @@ body {
     display: flex;
     flex-direction: column;
   }
+  #click-garden-sm,
+  #click-garden-bg {
+    display: none;
+  }
   #business-card {
     order: -1;
   }
@@ -176,7 +180,7 @@ body {
   }
 
   .mobile-v {
-    height: 65vh;
+    height: 520px;
     transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
@@ -197,5 +201,11 @@ body {
     flex-direction: column;
     gap: 2rem;
     margin-top: 7rem;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  .mobile-v {
+    height: 90vh;
   }
 }

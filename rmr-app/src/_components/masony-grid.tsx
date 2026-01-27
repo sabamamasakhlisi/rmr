@@ -38,7 +38,7 @@ function GridItemWithParallax({
         className="absolute inset-x-0 -top-[15%] h-[130%] w-full transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
       >
         {item.src ? (
-          <div className="flex flex-col justify-center items-center text-center">
+          <div className="relative flex flex-col justify-center items-center text-center">
             {item.id === 8 ? (
               <ReactPlayer
                 url={
@@ -78,7 +78,9 @@ function GridItemWithParallax({
                   alt={item.alt || item.title || "Project Image"}
                   width={item.width}
                   height={item.height}
-                  style={{ maxHeight: item.id > 17 ? "500px" : "" }}
+                  style={{
+                    maxHeight: item.id > 17 ? "500px" : "",
+                  }}
                   id={item.id.toString()}
                   priority={
                     !!(item?.position?.rowStart && item.position.rowStart < 3)
