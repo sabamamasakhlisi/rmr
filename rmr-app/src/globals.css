@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  cursor:
-    url("../public/cursor.svg") 16 16,
-    pointer !important;
-}
-
 :root {
   --text-offwhite: #e8e8e8;
   --light-text-offwhite: #e8e8e87a;
@@ -370,6 +364,10 @@ body {
   img {
     height: auto;
     max-width: 100%;
+  }
+
+  .olvides {
+    flex-direction: column;
   }
 
   .fs-24 {

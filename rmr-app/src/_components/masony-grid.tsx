@@ -34,6 +34,7 @@ function GridItemWithParallax({
     >
       <div
         data-parallax-inner
+        id={item?.hash}
         className="absolute inset-x-0 -top-[15%] h-[130%] w-full transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform "
       >
         {item.src ? (
@@ -59,7 +60,7 @@ function GridItemWithParallax({
                 light={item.src}
               />
             ) : item.id === 22 ? (
-              <div className="flex gap-4">
+              <div className="flex gap-4 olvides">
                 <Image
                   src={item.src}
                   alt={item.alt || item.title || "Project Image"}
@@ -114,8 +115,10 @@ function GridItemWithParallax({
             )}
 
             {item.description && (
-              <div className="image-text">
-                <h3 className="image-text">{item.description || item.title}</h3>
+              <div className={item.id > 1 ? "mt-4" : ""}>
+                <h3 className="image-text ">
+                  {item.description || item.title}
+                </h3>
               </div>
             )}
             {item.id === 7 && (

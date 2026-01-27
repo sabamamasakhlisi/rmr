@@ -11,7 +11,14 @@ export default function Header() {
       <h6>
         <p>If you want to know more, let’s talk!</p>
         <span>
-          <a href="">email</a>·<a href="">instagram</a>·<a href="">linkedin</a>
+          <a href="rosamtrbls@gmail.com">email</a>·
+          <a href="https://www.instagram.com/rosamtrbls/" target="_blank">
+            instagram
+          </a>
+          ·
+          <a href="https://www.linkedin.com/in/rosamtrbls/" target="_blank">
+            linkedin
+          </a>
         </span>
       </h6>
     </header>

@@ -27,7 +27,7 @@ const PPMori = localFont({
 export const metadata: Metadata = {
   title: "Rosa Mota Robles",
   description:
-    "graphic design /  communication /  illustration / cultural mediation / and much more!",
+    "Rosa Mota Robles - graphic & editorial design /  communication /  illustration / cultural management",
   verification: {
     google: "4qVG4eC2XyE24J56Grt_XS7sVqOL-_FI_gowb1gle90",
   },
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.rosamtrbls.com/en",
     title:
-      "Rosa Mota Robles - graphic design /  communication /  illustration / cultural mediation / and much more!",
+      "Rosa Mota Robles - graphic & editorial design /  communication /  illustration / cultural management",
     description:
-      "graphic design /  communication /  illustration / cultural mediation / and much more!",
+      "graphic design / editorial design /  communication /  illustration / cultural management / exhibition design",
     siteName: "rosamtrbls - Rosa Mota Robles",
     images: [
       {

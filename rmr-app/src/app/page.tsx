@@ -142,11 +142,10 @@ export default function Home() {
       {hasScrolledPastLast && (
         <div className="pb-20 flex justify-center items-center">
           <button
-            className="mt-8 pb-8 cursor-pointer text-[24px] left-1/2 -translate-x-1/2 z-50 w-12 h-12  transition-all"
+            className="mt-8 pb-8 cursor-pointer text-[24px] left-1/2  z-50 w-12 h-12"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
-              console.log("clicked");
             }}
           >
             <Image
