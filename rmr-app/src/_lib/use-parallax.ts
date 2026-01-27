@@ -26,7 +26,7 @@ export function useParallax(options: ParallaxOptions = {}) {
         const progress = (viewportHeight - rect.top) / range;
 
         // Travel distance - adjust 400 for more/less movement
-        const travelDistance = -100 * speed;
+        const travelDistance = -200 * speed;
         const parallaxOffset =
           (progress - 0.5) * travelDistance * (direction === "up" ? 1 : -1);
 

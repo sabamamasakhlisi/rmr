@@ -20,6 +20,7 @@ export interface GridItem {
   title: string;
   position?: GridPosition;
   hash?: string;
+  italicTitle?: string;
   [key: string]: any; // Allow additional properties
 }
 

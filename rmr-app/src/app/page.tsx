@@ -107,8 +107,10 @@ export default function Home() {
 
   useEffect(() => {
     // 1. Target the last item's ID or use a ref if MasonryGrid supports it
-    const lastItemId = gridItems[gridItems.length - 1].id.toString();
-    const target = document.getElementById(lastItemId);
+    const lastItemId = gridItems[gridItems.length - 1];
+    const target = document.getElementById(
+      lastItemId?.hash || lastItemId?.id.toString(),
+    );
 
     if (!target) return;
 
@@ -142,7 +144,7 @@ export default function Home() {
       {hasScrolledPastLast && (
         <div className="pb-20 flex justify-center items-center">
           <button
-            className="mt-8 pb-8 cursor-pointer text-[24px] left-1/2  z-50 w-12 h-12"
+            className="mt-8 pb-8 cursor-pointer text-[24px] z-50 w-12 h-12 relative"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });

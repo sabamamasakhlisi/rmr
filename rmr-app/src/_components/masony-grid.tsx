@@ -24,7 +24,7 @@ function GridItemWithParallax({
     <div
       ref={ref}
       className="group relative overflow-hidden rounded-2xl isolate bg-neutral-900 cell-inner flex flex-col items-center text-center"
-      id={id?.toString()}
+      id={item?.hash}
       style={{
         ...(item.position ? { ...gridPositionToStyle(item.position) } : {}),
         height: "100%",
@@ -35,7 +35,7 @@ function GridItemWithParallax({
       <div
         data-parallax-inner
         id={item?.hash}
-        className="absolute inset-x-0 -top-[15%] h-[130%] w-full transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform "
+        className="absolute inset-x-0 -top-[15%] h-[130%] w-full transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
       >
         {item.src ? (
           <div className="flex flex-col justify-center items-center text-center">
@@ -115,9 +115,14 @@ function GridItemWithParallax({
             )}
 
             {item.description && (
-              <div className={item.id > 1 ? "mt-4" : ""}>
-                <h3 className="image-text ">
-                  {item.description || item.title}
+              <div className={item.id > 1 ? "description editorial" : ""}>
+                <h3 className="image-text">
+                  {!!item?.italicTitle ? (
+                    <span className="italic">{item.italicTitle}</span>
+                  ) : (
+                    ""
+                  )}
+                  {item.description}
                 </h3>
               </div>
             )}

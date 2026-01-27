@@ -1,6 +1,29 @@
+"use client";
+import classNames from "classnames";
+
+import { useEffect, useState } from "react";
+
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  console.log("scrolled:", scrolled);
+
   return (
-    <header className="fixed flex flex-col justify-between neg-text text-[13px] h-screen w-2/5 pt-[5rem] pl-[3.125rem] pb-[5rem] z-10 header max-w-[23.75rem]">
+    <header
+      className={classNames(
+        `fixed flex flex-col justify-between neg-text text-[13px] h-screen w-2/5 pt-[5rem] pl-[3.125rem] pb-[5rem] z-10 header max-w-[23.75rem] mobile-v`,
+        scrolled ? "normal-view" : "",
+      )}
+    >
       <h3>
         <span className="font-bold">
           ¡Hola! My name is Rosa and I’m a creative and visual designer.
