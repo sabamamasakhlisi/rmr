@@ -60,7 +60,7 @@ function GridItemWithParallax({
                 light={item.src}
               />
             ) : item.id === 22 ? (
-              <div className="flex gap-4 olvides">
+              <div className="flex olvides">
                 <Image
                   src={item.src}
                   alt={item.alt || item.title || "Project Image"}
@@ -91,7 +91,11 @@ function GridItemWithParallax({
                 alt={item.alt || item.title || "Project Image"}
                 width={item.width}
                 height={item.height}
-                style={{ maxHeight: item.id > 17 ? "500px" : "" }}
+                style={{
+                  maxHeight: item.id === 18 || item.id === 19 ? "500px" : "",
+                  marginTop: item.id === 23 ? "1rem" : "",
+                  height: item.id === 4 ? "auto" : "",
+                }}
                 id={item.id.toString()}
                 unoptimized={isGif}
                 priority={
@@ -127,7 +131,7 @@ function GridItemWithParallax({
               </div>
             )}
             {item.id === 7 && (
-              <div>
+              <div className="description">
                 <Image
                   src="/garden_ai.png"
                   alt={item.alt}

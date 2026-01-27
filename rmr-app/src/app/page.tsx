@@ -114,14 +114,8 @@ export default function Home() {
 
     if (!target) return;
 
-    // 2. Intersection Observer detects when the item leaves the viewport
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // entry.isIntersecting is true if any part of the item is visible
-        // We want the arrow when the item is NOT intersecting and is above the view
-
-        console.log(entry.isIntersecting, "entry.isIntersecting");
-
         setHasScrolledPastLast(entry.isIntersecting);
       },
       { threshold: 0 }, // Trigger as soon as the first/last pixel enters/leaves

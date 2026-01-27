@@ -15,8 +15,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log("scrolled:", scrolled);
-
   return (
     <header
       className={classNames(
@@ -24,14 +22,14 @@ export default function Header() {
         scrolled ? "normal-view" : "",
       )}
     >
-      <h3>
+      <h3 className="editorial mobile-header">
         <span className="font-bold">
-          ¡Hola! My name is Rosa and I’m a creative and visual designer.
+          ¡Hola! My name is Rosa and I’m a creative and visual designer.{" "}
         </span>
         Moving across disciplines, learning and having fun, this is but a
         selection of my projects, creations and hyper fixations. Welcome.
       </h3>
-      <h6>
+      <h6 className="editorial mobile-header-footer">
         <p>If you want to know more, let’s talk!</p>
         <span>
           <a href="rosamtrbls@gmail.com">email</a>·
