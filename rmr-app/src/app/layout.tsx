@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "rosamtrbls - Rosa Mota Robles",
     images: [
       {
-        url: "https://www.rosamtrbls.com/_next/image?url=%2Fno-olvides-libro.jpg&w=1200&q=100",
+        url: "https://www.rosamtrbls.com/_next/image?url=%2Fno-olvides-libro.jpg&w=384&q=100",
         width: 1200,
         height: 630,
         alt: "Rosa Mota Robles - Graphic Design Portfolio",
