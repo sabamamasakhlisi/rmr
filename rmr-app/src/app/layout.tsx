@@ -42,6 +42,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://www.rosamtrbls.com/_next/image?url=%2Fno-olvides-libro.jpg&w=384&q=75",
+        width: 1200,
+        height: 630,
+        alt: "Rosa Mota Robles - Graphic Design Portfolio",
       },
     ],
   },
