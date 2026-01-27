@@ -18,7 +18,7 @@ export interface GridItem {
   height: number;
   alt: string;
   title: string;
-  position: GridPosition;
+  position?: GridPosition;
   [key: string]: any; // Allow additional properties
 }
 
@@ -64,7 +64,7 @@ export function parseGridPosition(notation: string): GridPosition {
  * Convert GridPosition to CSS Grid properties
  */
 export function gridPositionToStyle(
-  position: GridPosition
+  position: GridPosition,
 ): React.CSSProperties {
   return {
     gridRowStart: position.rowStart,

@@ -68,13 +68,6 @@
   }
 }
 
-@media (max-width: 376px) {
-  .title {
-    font-size: 3.225rem;
-    margin-top: 0.325rem;
-  }
-}
-
 @media (max-width: 325px) {
   .mainSubtitle {
     font-size: 2rem;

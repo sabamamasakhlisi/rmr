@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 * {
-  cursor: url("../public/cursor.svg") 16 16, pointer !important;
+  cursor:
+    url("../public/cursor.svg") 16 16,
+    pointer !important;
 }
 
 :root {
@@ -25,11 +27,25 @@
   --screen-lg: 1200px;
 }
 
+img {
+  height: revert-layer;
+}
+
 body {
   background: rgba(220, 220, 220, 1);
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+.image-text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(99, 99, 99, 1);
 }
 
 .p-h {
@@ -306,6 +322,16 @@ body {
   margin: 0 auto;
 }
 
+[data-parallax-inner] {
+  will-change: transform;
+}
+
+@media (max-width: 1600px) {
+  /* .main-content {
+    transform: scale(75%);
+  } */
+}
+
 @media (max-width: 1391px) {
   .rs-wrap {
     gap: 1rem;
@@ -341,14 +367,34 @@ body {
     padding: 0 1.725rem 2rem 1.725rem;
   }
 
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
   .fs-24 {
     font-size: 1rem;
+  }
+  .absolute {
+    position: relative;
+  }
+  .inner-item {
+    max-width: fit-content;
   }
 }
 
 @media (max-width: 490px) {
   .gap-8 {
     gap: 1rem;
+  }
+  .header {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 50px;
+  }
+
+  .main-content {
+    transform: scale(1);
   }
 
   .p-h {
@@ -357,6 +403,11 @@ body {
 
   .font-34px {
     font-size: 1.625rem;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .font-64px {

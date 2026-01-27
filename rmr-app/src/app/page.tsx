@@ -1,6 +1,9 @@
+"use client";
 import { MasonryGrid } from "@/_components/masony-grid";
 import { GridItem, parseGridPosition } from "@/_lib/grid-config";
 import { images } from "@/_lib/images";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 // Transform your existing images data to use the new grid system
 const gridItems: GridItem[] = [
@@ -10,155 +13,151 @@ const gridItems: GridItem[] = [
   },
   {
     ...images[1],
-    position: parseGridPosition("1.4"), // First row, fourth column (last)
+    position: parseGridPosition("1.4"), // First row, fourth column
   },
   {
     ...images[2],
-    position: parseGridPosition("2.4"), // Second row, second column
+    position: parseGridPosition("2.2"), // First row, fourth column
   },
   {
     ...images[3],
-    position: parseGridPosition("2.3:3.4"), // Spans rows 2-3, columns 3-4
+    position: parseGridPosition("2.1:3.1"), // First row, fourth column
   },
   {
     ...images[4],
-    position: parseGridPosition("3.1:3.4"), // Third row, spans columns 1-4
+    position: parseGridPosition("2.3:3.4"), // First row, fourth column
   },
   {
     ...images[5],
-    position: parseGridPosition("3.1"), // Third row, first column
+    position: parseGridPosition("3.2:4.2"), // First row, fourth column
   },
   {
     ...images[6],
-    position: parseGridPosition("2.1"), // Second row, first column
+    position: parseGridPosition("4.3:6.4"), // First row, fourth column
   },
   {
     ...images[7],
-    position: parseGridPosition("4.2"), // First row, second column
+    position: parseGridPosition("5.1:6.2"), // First row, fourth column
   },
   {
-    id: 101,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 1",
-    title: "Placeholder 1",
-    position: parseGridPosition("4.1"), // Row 4, column 1
+    ...images[8],
+    position: parseGridPosition("7.3"), // First row, fourth column
   },
   {
-    id: 102,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 2",
-    title: "Placeholder 2",
-    position: parseGridPosition("4.2:4.3"), // Row 4, spans columns 2-3
+    ...images[9],
+    position: parseGridPosition("7.4"), // First row, fourth column
   },
   {
-    id: 103,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 3",
-    title: "Placeholder 3",
-    position: parseGridPosition("4.4"), // Row 4, column 4
+    ...images[10],
+    position: parseGridPosition("8.2:11.3"), // First row, fourth column
   },
   {
-    id: 104,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 4",
-    title: "Placeholder 4",
-    position: parseGridPosition("5.1:6.2"), // Spans rows 5-6, columns 1-2
+    ...images[11],
+    position: parseGridPosition("9.1:10.1"), // First row, fourth column
   },
   {
-    id: 105,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 5",
-    title: "Placeholder 5",
-    position: parseGridPosition("5.3"), // Row 5, column 3
+    ...images[12],
+    position: parseGridPosition("10.4:11.4"), // First row, fourth column
   },
   {
-    id: 106,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 6",
-    title: "Placeholder 6",
-    position: parseGridPosition("5.4"), // Row 5, column 4
+    ...images[13],
+    position: parseGridPosition("12.1:17.1"), // First row, fourth column
   },
   {
-    id: 107,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 7",
-    title: "Placeholder 7",
-    position: parseGridPosition("6.3:6.4"), // Row 6, spans columns 3-4
+    ...images[14],
+    position: parseGridPosition("12.2"), // First row, fourth column
   },
   {
-    id: 108,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 8",
-    title: "Placeholder 8",
-    position: parseGridPosition("7.1"), // Row 7, column 1
+    ...images[15],
+    position: parseGridPosition("13.2"), // First row, fourth column
   },
   {
-    id: 109,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 9",
-    title: "Placeholder 9",
-    position: parseGridPosition("7.2"), // Row 7, column 2
+    ...images[16],
+    position: parseGridPosition("12.3:14.4"), // First row, fourth column
   },
   {
-    id: 110,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 10",
-    title: "Placeholder 10",
-    position: parseGridPosition("7.3"), // Row 7, column 3
+    ...images[17],
+    position: parseGridPosition("15.2:16.3"), // First row, fourth column
   },
   {
-    id: 111,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 11",
-    title: "Placeholder 11",
-    position: parseGridPosition("7.4"), // Row 7, column 4
+    ...images[18],
+    position: parseGridPosition("15.4:16.4"), // First row, fourth column
   },
   {
-    id: 112,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 12",
-    title: "Placeholder 12",
-    position: parseGridPosition("8.1:8.2"), // Row 8, spans columns 1-2
+    ...images[19],
+    position: parseGridPosition("17.2:18.2"), // First row, fourth column
   },
   {
-    id: 113,
-    src: "",
-    width: 400,
-    height: 300,
-    alt: "Placeholder 13",
-    title: "Placeholder 13",
-    position: parseGridPosition("8.3:9.4"), // Spans rows 8-9, columns 3-4
+    ...images[20],
+    position: parseGridPosition("19.2"), // First row, fourth column
+  },
+  {
+    ...images[21],
+    position: parseGridPosition("18.3:18.4"), // First row, fourth column
+  },
+  {
+    ...images[22],
+    position: parseGridPosition("19.3:20.4"), // First row, fourth column
   },
 ];
 
 export default function Home() {
+  const [hasScrolledPastLast, setHasScrolledPastLast] = useState(false);
+  const lastItemRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 1. Target the last item's ID or use a ref if MasonryGrid supports it
+    const lastItemId = gridItems[gridItems.length - 1].id.toString();
+    const target = document.getElementById(lastItemId);
+
+    if (!target) return;
+
+    // 2. Intersection Observer detects when the item leaves the viewport
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // entry.isIntersecting is true if any part of the item is visible
+        // We want the arrow when the item is NOT intersecting and is above the view
+
+        console.log(entry.isIntersecting, "entry.isIntersecting");
+
+        setHasScrolledPastLast(entry.isIntersecting);
+      },
+      { threshold: 0 }, // Trigger as soon as the first/last pixel enters/leaves
+    );
+
+    observer.observe(target);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <main className="min-h-screen p-8">
-      <MasonryGrid items={gridItems} columns={4} gap={30} />
+    <main className="min-h-screen main-content relative pt-[80px] pb-[80px] pl-[50px] pr-[50px]">
+      <MasonryGrid
+        items={gridItems}
+        columns={4}
+        gap={1.875}
+        parallaxSpeed={0.6}
+      />
+
+      {hasScrolledPastLast && (
+        <div className="pb-20 flex justify-center items-center">
+          <button
+            className="mt-8 pb-8 cursor-pointer text-[24px] left-1/2 -translate-x-1/2 z-50 w-12 h-12  transition-all"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              console.log("clicked");
+            }}
+          >
+            <Image
+              src="/arrow-up.svg"
+              alt="Scroll to top"
+              width={50}
+              height={50}
+            />
+          </button>
+        </div>
+      )}
     </main>
   );
 }

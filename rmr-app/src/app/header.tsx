@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="fixed flex flex-col justify-between neg-text h-screen w-2/5 pt-[3.125em] pl-[3.125em] pb-[3.125em] z-10">
+    <header className="fixed flex flex-col justify-between neg-text text-[13px] h-screen w-2/5 pt-[5rem] pl-[3.125rem] pb-[5rem] z-10 header max-w-[23.75rem]">
       <h3>
         <span className="font-bold">
           ¡Hola! My name is Rosa and I’m a creative and visual designer.
