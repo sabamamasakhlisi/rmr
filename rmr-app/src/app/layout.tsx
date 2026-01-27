@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://www.rosamtrbls.com/en",
+    url: "https://www.rosamtrbls.com",
     title:
       "Rosa Mota Robles - graphic & editorial design /  communication /  illustration / cultural management",
     description:

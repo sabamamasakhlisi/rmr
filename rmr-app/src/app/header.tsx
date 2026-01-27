@@ -32,7 +32,7 @@ export default function Header() {
       <h6 className="editorial mobile-header-footer">
         <p>If you want to know more, let’s talk!</p>
         <span>
-          <a href="rosamtrbls@gmail.com">email</a>·
+          <a href="mailto:rosamtrbls@gmail.com">email</a>·
           <a href="https://www.instagram.com/rosamtrbls/" target="_blank">
             instagram
           </a>
