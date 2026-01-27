@@ -180,7 +180,7 @@ body {
   }
 
   .mobile-v {
-    height: 520px;
+    height: 540px;
     transition: height 1s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
